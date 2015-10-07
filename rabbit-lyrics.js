@@ -69,7 +69,8 @@ RabbitLyrics.prototype.parseLyrics = function () {
             lastTime = this.decodeTimeStamp(beginningTime[0]);
         } else if (endingTime.length > 0) {
             // Only have ending time stamp
-            lineElement.data('end', this.decodeTimeStamp(endingTime[0]));
+            lineElement.data('start', lastTime)
+                    .data('end', this.decodeTimeStamp(endingTime[0]));
             lastTime = this.decodeTimeStamp(endingTime[0]);
         } else {
             // Do not have any time stamps
