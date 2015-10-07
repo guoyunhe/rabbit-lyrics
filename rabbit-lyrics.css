@@ -3,6 +3,19 @@
 
 }
 
+.rabbit-lyrics.tiny {
+    height: 3em;
+}
+
+.rabbit-lyrics.tiny .line:not(.active) {
+    display: none;
+}
+
+.rabbit-lyrics.medium {
+    height: 10em;
+    overflow-y: auto;
+}
+
 .rabbit-lyrics .line.active {
     color: blue;
 }

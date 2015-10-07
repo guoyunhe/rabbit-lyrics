@@ -21,8 +21,13 @@ function RabbitLyrics(options) {
             this.size = 'medium';
     }
     
-    this.parseLyrics().enableLyrics();
+    this.applySize().parseLyrics().enableLyrics();
 }
+
+RabbitLyrics.prototype.applySize = function () {
+    this.lyricsElement.addClass(this.size);
+    return this;
+};
 
 RabbitLyrics.prototype.parseLyrics = function () {
     var lines = this.lyricsElement.text().trim().split('\n');
