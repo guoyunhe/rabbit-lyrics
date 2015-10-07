@@ -31,16 +31,13 @@ RabbitLyrics.prototype.applySize = function () {
 
 RabbitLyrics.prototype.parseLyrics = function () {
     var lines = this.lyricsElement.text().trim().split('\n');
-    
-    var inner = jQuery('<div class="inner"></div>');
     this.lyricsElement.html('');
-    this.lyricsElement.append(inner);
-    
+        
     var lastTime = 0;
     
     for (var i = 0; i < lines.length; i++) {
         var lineElement = jQuery('<div class="line"></div>');
-        inner.append(lineElement);
+        this.lyricsElement.append(lineElement);
         
         var line = lines[i].trim();
         
@@ -57,7 +54,7 @@ RabbitLyrics.prototype.parseLyrics = function () {
         lineElement.html(line);
         
         if (times.length > 0) {
-            inner.find('.no-end').removeClass('no-end').data('end', this.decodeTimeStamp(times[0]));
+            this.lyricsElement.find('.no-end').removeClass('no-end').data('end', this.decodeTimeStamp(times[0]));
         }
         
         if (times.length === 2 && beginningTime.length > 0 && endingTime.length > 0) {
