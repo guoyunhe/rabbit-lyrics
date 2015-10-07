@@ -79,7 +79,6 @@ RabbitLyrics.prototype.parseLyrics = function () {
         }
     }
     
-    console.log('lyrics parsed');
     return this;
 };
 
@@ -87,6 +86,7 @@ RabbitLyrics.prototype.enableLyrics = function () {
     var that = this;
     
     this.lyrics = [];
+    this.activeLyrics = [];
     
     this.lyricsElement.find('.line').each(function () {
         that.lyrics.push({
@@ -96,21 +96,43 @@ RabbitLyrics.prototype.enableLyrics = function () {
         });
     });
     
-    this.audioElement.bind('timeupdate', function () {
+    this.lyricsElement.scrollTop(0);
+    
+    this.audioElement.bind('timeupdate', synchronizer);
+    
+    function synchronizer() {
         var time = that.time = that.audioElement[0].currentTime;
-        
+        var changed = false;
+        that.activeLyrics = [];
         for (var i = 0; i < that.lyrics.length; i++) {
             var lrc = that.lyrics[i];
             if (lrc.start < time && lrc.end > time) {
-                lrc.element.addClass('active');
+                if (!lrc.element.hasClass('active')) {
+                    changed = true;
+                    lrc.element.addClass('active');
+                }
+                that.activeLyrics.push(lrc);
             } else {
-                lrc.element.removeClass('active');
+                if (lrc.element.hasClass('active')) {
+                    changed = true;
+                    lrc.element.removeClass('active');
+                }
             }
         }
-    });
+        
+        if (that.size === 'medium' && changed && that.activeLyrics.length > 0) {
+            var scrollHeight = that.lyricsElement.scrollTop() + 
+                    (that.activeLyrics[0].element.offset().top +
+                    that.activeLyrics[that.activeLyrics.length-1].element.offset().top) / 2 -
+                    that.lyricsElement.offset().top -
+                    that.lyricsElement.height() / 2;
+            that.lyricsElement.stop().animate({
+                scrollTop: scrollHeight
+            }, 200);
+        }
+    }
     
     this.lyricsElement.data('lyricsEnabled');
-    console.log('lyrics enabled');
     
     return this;
 };
