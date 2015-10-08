@@ -80,6 +80,8 @@ RabbitLyrics.prototype.parseLyrics = function () {
         }
     }
     
+    this.lyricsElement.find('.no-end').removeClass('no-end').data('end', 999999);
+    
     return this;
 };
 
