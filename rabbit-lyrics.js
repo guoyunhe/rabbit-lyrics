@@ -45,14 +45,6 @@ RabbitLyrics.prototype.parseLyrics = function () {
         var beginningTime = line.match(/^\[\d+:\d+\.\d+\]/g) || [];
         var endingTime = line.match(/\[\d+:\d+\.\d+\]$/g) || [];
         
-        line = line.replace(/\[\d+:\d+\.\d+\]/g, '');
-        
-        if (!line) {
-            line = '&nbsp;';
-        }
-        
-        lineElement.html(line);
-        
         if (times.length > 0) {
             this.lyricsElement.find('.no-end').removeClass('no-end').data('end', this.decodeTimeStamp(times[0]));
         }
@@ -78,6 +70,15 @@ RabbitLyrics.prototype.parseLyrics = function () {
                     .data('start', lastTime)
                     .addClass('no-end');
         }
+        
+        line = line.replace(/\[\d+:\d+\.\d+\]/g, '');
+        
+        if (!line) {
+            line = '&nbsp;';
+            lineElement.data('start', 999999).data('end', 999999);
+        }
+        
+        lineElement.html(line);
     }
     
     this.lyricsElement.find('.no-end').removeClass('no-end').data('end', 999999);
