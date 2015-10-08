@@ -128,3 +128,32 @@ Options
 1. `tiny` - show 2 line of text, with slide effect, not auto scroll.
 2. `medium` - default size, show about 10 lines of text, with auto scroll effect.
 3. `full` - show all text, no scroll.
+
+Custom Style
+------------
+
+Rabbit lyrics has very simple basic style. You can override it easily.
+
+Example:
+```css
+.rabbit-lyrics {
+  background-color: #ffeeff;
+  text-align: center;
+}
+
+.rabbit-lyrics.tiny {
+  height: 22px;
+}
+
+.rabbit-lyrics.medium {
+  height: 80px;
+}
+
+.rabbit-lyrics .line {
+  padding: 4px;
+}
+
+.rabbit-lyrics .line.active {
+  color: #00eeff;
+}
+```
