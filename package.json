@@ -2,8 +2,9 @@
   "name": "rabbit-lyrics",
   "version": "1.0.0",
   "description": "JavaScript audio and timed lyrics synchronizer",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/guoyunhe/rabbit-lyrics/issues"
   },
-  "homepage": "https://github.com/guoyunhe/rabbit-lyrics#readme"
+  "homepage": "https://github.com/guoyunhe/rabbit-lyrics#readme",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "webpack": "^3.4.1"
+  }
 }
