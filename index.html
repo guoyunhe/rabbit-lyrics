@@ -32,7 +32,7 @@ audio {
     margin: 20px 0;
 }
 
-sidebar {
+aside {
     flex: 0 0 300px;
     padding: 10px 20px;
     background: #000000;
@@ -40,12 +40,13 @@ sidebar {
     line-height: 2em;
 }
 
-sidebar ul {
-    list-style: none;
-    padding-left: 0;
+aside ol {
+    position: fixed;
+    top: 20px;
+    left: 20px;
 }
 
-sidebar a {
+aside a {
     color: #ffffff;
     text-decoration: none;
 }
@@ -54,12 +55,6 @@ main {
     flex: 1 1 600px;
     max-width: 100%;
     overflow-x: hidden;
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        display: block;
-    }
 }
 
 pre {
@@ -86,18 +81,34 @@ code {
 .section {
     padding: 30px 0;
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        display: block;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    aside ol {
+        position: relative;
+    }
+}
 </style>
 </head>
 <body>
-<sidebar>
-    <ul>
+<aside>
+    <ol>
         <li><a href="#introduction">Introduction</a></li>
         <li><a href="#install">Install</a></li>
         <li><a href="#initialize">Initialize</a></li>
         <li><a href="#options">Options</a></li>
         <li><a href="#examples">Examples</a></li>
-    </ul>
-</sidebar>
+    </ol>
+</aside>
 <main>
     <div class="container">
         <h1 id="introduction">Introduction</h1>
@@ -168,6 +179,36 @@ new RabbitLyrics({
         <p>
             If no <code>mediaElement</code> option provided, it will try to search first audio or video element before.
         </p>
+
+        <h1 id="options">Options</h1>
+
+        <h2>element</h2>
+
+        <p>Type: <code>HTMLDivElement</code></p>
+
+        <p>The <code>div</code> element that contains lyrics.</p>
+
+        <h2>mediaElement</h2>
+
+        <p>Type: <code>HTMLMediaElement</code> (audio or video elements)</p>
+
+        <p>Default: the first audio or video element before</p>
+
+        <p>HTML attribute: <code>data-media-element</code> (selector of media element)</p>
+
+        <h2>viewMode</h2>
+
+        <p>Type: <code>string</code></p>
+
+        <p>Default: <code>'default'</code></p>
+
+        <p>HTML attribute: <code>data-view-mode</code></p>
+
+        <ul>
+            <li>default</li>
+            <li>mini</li>
+            <li>full</li>
+        </ul>
 
         <h1 id="examples">Examples</h1>
 
