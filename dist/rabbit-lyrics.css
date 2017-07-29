@@ -1,18 +1,15 @@
 .rabbit-lyrics {
   position: relative;
-  height: 300px;
+  height: 16.5em;
   overflow-x: hidden;
   overflow-y: auto; }
-
-.rabbit-lyrics.tiny {
-  height: 3em; }
-
-.rabbit-lyrics.tiny .line:not(.active) {
-  display: none; }
-
-.rabbit-lyrics.medium {
-  height: 15em;
-  overflow-y: auto; }
-
-.rabbit-lyrics .line.active {
-  color: blue; }
+  .rabbit-lyrics .line {
+    min-height: 1.5em; }
+    .rabbit-lyrics .line.active {
+      color: #41bdff; }
+  .rabbit-lyrics.mini {
+    min-height: 3em; }
+    .rabbit-lyrics.mini .line {
+      display: none; }
+      .rabbit-lyrics.mini .line.active {
+        display: block; }

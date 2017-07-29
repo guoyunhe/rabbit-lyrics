@@ -45,7 +45,7 @@ export default class RabbitLyrics {
         } else {
             this.findMediaElement();
         }
-        this.scrollerIntervalDuration = 100;
+        this.scrollerIntervalDuration = 200;
         this.scrollerIntervalStep = 10;
         this.lineElements = [];
 
@@ -128,7 +128,7 @@ export default class RabbitLyrics {
                 line = '&nbsp;';
             }
 
-            lineElement.textContent = line;
+            lineElement.innerHTML = line;
         }
 
         return this;

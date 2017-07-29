@@ -83,7 +83,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  * Report bugs: https://github.com/guoyunhe/rabbit-lyrics/issues
  */
 
- 
+
 
 /**
  * Rabbit Lyrics main class
@@ -118,7 +118,7 @@ class RabbitLyrics {
         } else {
             this.findMediaElement();
         }
-        this.scrollerIntervalDuration = 100;
+        this.scrollerIntervalDuration = 200;
         this.scrollerIntervalStep = 10;
         this.lineElements = [];
 
@@ -201,7 +201,7 @@ class RabbitLyrics {
                 line = '&nbsp;';
             }
 
-            lineElement.textContent = line;
+            lineElement.innerHTML = line;
         }
 
         return this;
@@ -303,7 +303,7 @@ window.RabbitLyrics = RabbitLyrics;
 document.addEventListener('DOMContentLoaded', function () {
     let elements = document.getElementsByClassName('rabbit-lyrics')
 
-    for (let i = 0 ; i < elements.length; i++) {
+    for (let i = 0; i < elements.length; i++) {
         new RabbitLyrics({
             element: elements[i]
         });
