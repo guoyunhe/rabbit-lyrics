@@ -7,9 +7,13 @@
     min-height: 1.5em; }
     .rabbit-lyrics .line.active {
       color: #41bdff; }
-  .rabbit-lyrics.mini {
-    min-height: 3em; }
-    .rabbit-lyrics.mini .line {
+  .rabbit-lyrics.rabbit-lyrics-mini {
+    height: 1.5em;
+    overflow-y: hidden; }
+    .rabbit-lyrics.rabbit-lyrics-mini .line {
       display: none; }
-      .rabbit-lyrics.mini .line.active {
-        display: block; }
+      .rabbit-lyrics.rabbit-lyrics-mini .line.active {
+        display: inline-block; }
+  .rabbit-lyrics.rabbit-lyrics-full {
+    height: auto;
+    overflow-y: initial; }

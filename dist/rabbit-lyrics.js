@@ -108,16 +108,35 @@ class RabbitLyrics {
      * @param {Object} options
      * @param {HTMLDivElement} options.element The block this contains lyrics
      * @param {HTMLMediaElement} options.mediaElement The audio or video element to synchronize
-     * @param {string} options.mode Modes of lyrics view box, available values: default, mini
+     * @param {string} options.viewMode Modes of lyrics view box, available values: default, mini
      * @param {string} options.alignment Lyrics text alighment, available values: left, center, right
      */
     constructor(options) {
         this.element = options.element;
+
         if (options.mediaElement) {
             this.mediaElement = options.mediaElement;
         } else {
             this.findMediaElement();
         }
+
+        if (options.viewMode) {
+            this.viewMode = options.viewMode;
+        } else {
+            this.viewMode = 'default';
+        }
+
+        switch (this.viewMode) {
+            case 'mini':
+                this.element.classList.add('rabbit-lyrics-mini');
+                break;
+            case 'full':
+                this.element.classList.add('rabbit-lyrics-full');
+                break;
+            default:
+                break;
+        }
+
         this.scrollerIntervalDuration = 200;
         this.scrollerIntervalStep = 10;
         this.lineElements = [];
@@ -304,9 +323,19 @@ document.addEventListener('DOMContentLoaded', function () {
     let elements = document.getElementsByClassName('rabbit-lyrics')
 
     for (let i = 0; i < elements.length; i++) {
-        new RabbitLyrics({
-            element: elements[i]
-        });
+        let element = elements[i];
+        let mediaElements = document.querySelector(element.dataset.media);
+        let mediaElement = mediaElements ? mediaElements[0] : null;
+        let { viewMode, height, theme } = element.dataset;
+        let options = {
+            element,
+            mediaElement,
+            viewMode,
+            height,
+            theme
+        };
+
+        new RabbitLyrics(options);
     }
 }, false);
 

@@ -1,27 +1,36 @@
+$line-height: 1.5em;
+
 .rabbit-lyrics {
     position: relative; // Must be relative, otherwise cannot calculate offset
-    height: 16.5em; // 11 lines
+    height: $line-height * 11;
     overflow-x: hidden;
     overflow-y: auto;
 
     .line {
-        min-height: 1.5em;
+        min-height: $line-height;
 
         &.active {
             color: #41bdff;
         }
     }
 
-    // Mini mode, only show active lines
-    &.mini {
-        min-height: 3em;
+    // Mini view mode, only show active lines
+    &.rabbit-lyrics-mini {
+        height: $line-height;
+        overflow-y: hidden;
 
         .line {
             display: none;
 
             &.active {
-                display: block;
+                display: inline-block;
             }
         }
+    }
+
+    // Full view mode, no scroll bar
+    &.rabbit-lyrics-full {
+        height: auto;
+        overflow-y: initial;
     }
 }
