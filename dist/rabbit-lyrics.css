@@ -1,0 +1,18 @@
+.rabbit-lyrics {
+  position: relative;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.rabbit-lyrics.tiny {
+  height: 3em; }
+
+.rabbit-lyrics.tiny .line:not(.active) {
+  display: none; }
+
+.rabbit-lyrics.medium {
+  height: 15em;
+  overflow-y: auto; }
+
+.rabbit-lyrics .line.active {
+  color: blue; }
