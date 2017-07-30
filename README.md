@@ -1,159 +1,133 @@
-Rabbit Lyrics
-=============
+# Rabbit Lyrics
 
-JavaScript audio and timed lyrics synchronizer.
+__Rabbit Lyrics__ is an audio and timed lyrics synchronizer for web. No jQuery required. No dependencies.
 
-* [WordPress Plugin](https://github.com/guoyunhe/rabbit-lyrics-wp)
+Yes, here are already many similar things but Rabbit Lyrics has something special:
 
-Dependency
-----------
 
-* jQuery
+1. Highlight multiple lines at the same time. Especially useful when adding translations.
+2. Do not depend on jQuery or any other libraries.
+3. Predefined themes for different web design.
 
-Usage
------
 
-Use HTML:
+[WordPress plugin](https://github.com/guoyunhe/rabbit-lyrics-wp) is also available.
+
+## Install?
+
+> I have never thought one day, people have to INSTALL JavaScript :thinking:
+
+You can install through NPM
+
+```
+npm install rabbit-lyrics --save
+```
+
+or download from [here](https://github.com/guoyunhe/rabbit-lyrics/releases).
+
+To import it into your project, you can either use Webpack way (require sass-loader):
+
+```js
+import RabbitLyrics from 'rabbit-lyrics'
+```
+
+or link files in HTML:
+
 ```html
-<audio id="audio1" controls>
-  <source src="rabbit.ogg" type="audio/ogg">
-  <source src="rabbit.mp3" type="audio/mpeg">
-</audio>
-<div class="rabbit-lyrics" data-audio="#audio1" data-size="medium">
-[00:01.00]one happy rabbit
-[00:04.00]two happy rabbit
-[00:08.00]three happy rabbit
-[00:11.00]la...
+<link href="path/to/rabbit-lyrics/dist/rabbit-lyrics.css" rel="stylesheet" type="text/css"/>
+<script src="path/to/rabbit-lyrics/dist/rabbit-lyrics.js" type="text/javascript">
+```
 
-[00:21.00]one happy rabbit
-[00:24.00]two happy rabbit
-[00:28.00]three happy rabbit
-[00:31.00]la...
+## Initialize
+
+### HTML
+
+When using HTML markups to initialize lyrics, you must add class `rabbit-lyrics` to the lyrics container.
+
+Idealy, add `data-media` attribute to specify the selector of audio or video element that you want to synchronize with lyrics. If `data-media` is not provided or element cannot be found, it will search first audio or video element before lyrics container.
+
+```html
+<audio id="audio-1" controls>
+    <source src="audio-1.ogg" type="audio/ogg">
+    <source src="audio-1.mp3" type="audio/mpeg">
+</audio>
+
+<div class="rabbit-lyrics" data-audio="#audio-1">
+[00:05.00] This is a little song
+[00:07.00] The song that nobody knows
+...
 </div>
 ```
 
-Use JavaScript:
-```html
-<audio id="audio1" controls>
-  <source src="rabbit.ogg" type="audio/ogg">
-  <source src="rabbit.mp3" type="audio/mpeg">
-</audio>
-<div id="lyrics1" class="rabbit-lyrics">
-[00:01.00]one happy rabbit
-[00:04.00]two happy rabbit
-[00:08.00]three happy rabbit
-[00:11.00]la...
+### JavaScript
 
-[00:21.00]one happy rabbit
-[00:24.00]two happy rabbit
-[00:28.00]three happy rabbit
-[00:31.00]la...
+When using JavaScript to initialize lyrics, you must __NOT__ add `rabbit-lyrics` class to lyrics container.
+
+If `mediaElement` is not provided or element cannot be found, it will search first audio or video element before lyrics container.
+
+```html
+<audio id="audio-1" controls>
+    <source src="audio-1.ogg" type="audio/ogg">
+    <source src="audio-1.mp3" type="audio/mpeg">
+</audio>
+
+<div id="lyrics-1">
+[00:05.00] This is a little song
+[00:07.00] The song that nobody knows
+...
 </div>
 ```
 
 ```js
 new RabbitLyrics({
-  lyricsElement: '#lyrics1', // or $('#lyrics1')
-  audioElement: '#audio1', // or $('#audio1')
-  size: 'medium'
+  element: document.findElementById('lyrics-1'),
+  mediaElement: document.findElementById('audio-1')
 });
 ```
 
-Ending time stamp is optional:
-```html
-<audio id="audio1" controls>
-  <source src="rabbit.ogg" type="audio/ogg">
-  <source src="rabbit.mp3" type="audio/mpeg">
-</audio>
-<div class="rabbit-lyrics" data-audio="#audio1" data-size="medium">
-[00:01.00]one happy rabbit
-[00:04.00]two happy rabbit
-[00:08.00]three happy rabbit
-[00:11.00]la...[00:13.00]
+## Options
 
-[00:21.00]one happy rabbit
-[00:24.00]two happy rabbit
-[00:28.00]three happy rabbit
-[00:31.00]la...[00:33.00]
-</div>
-```
+### element
 
-Multi-line mode:
-```html
-<audio id="audio1" controls>
-  <source src="rabbit.ogg" type="audio/ogg">
-  <source src="rabbit.mp3" type="audio/mpeg">
-</audio>
-<div class="rabbit-lyrics" data-audio="#audio1" data-size="medium">
-[00:01.00]一只快乐的兔子
-yi zhi kuai le de tu zi
-one happy rabbit
+Type: `HTMLDivElement`
 
-[00:04.00]两只快乐的兔子
-liang zhi kuai le de tu zi
-two happy rabbit
+The `div` element that contains lyrics.
 
-[00:08.00]三只快乐的兔子
-san zhi kuai le de tu zi
-three happy rabbit
+### mediaElement
 
-[00:11.00]啦...
-la...
-la...[00:13.00]
+Type: `HTMLMediaElement` (audio or video elements)
 
+Default: the first audio or video element before
 
-[00:21.00]一只快乐的兔子
-yi zhi kuai le de tu zi
-one happy rabbit
+HTML attribute: `data-media-element` (selector of media element)
 
-[00:24.00]两只快乐的兔子
-liang zhi kuai le de tu zi
-two happy rabbit
+### viewMode
 
-[00:28.00]三只快乐的兔子
-san zhi kuai le de tu zi
-three happy rabbit
+Type: `string`
 
-[00:31.00]啦...
-la...
-la...[00:33.00]
-</div>
-```
+Default: `'default'`
 
-Options
--------
+HTML attribute: `data-view-mode`
 
-**Size**:
+* default
+* mini
+* full
 
-1. `tiny` - show 2 line of text, with slide effect, not auto scroll.
-2. `medium` - default size, show about 10 lines of text, with auto scroll effect.
-3. `full` - show all text, no scroll.
+## Examples
 
-Custom Style
-------------
+[View all examples online](https://guoyunhe.me/rabbit-lyrics/#examples)
 
-Rabbit lyrics has very simple basic style. You can override it easily.
+### Basic
 
-Example:
-```css
-.rabbit-lyrics {
-  background-color: #ffeeff;
-  text-align: center;
-}
+[View online](https://guoyunhe.me/rabbit-lyrics/#example-basic)
 
-.rabbit-lyrics.tiny {
-  height: 22px;
-}
+### Multiple lines and translations
 
-.rabbit-lyrics.medium {
-  height: 80px;
-}
+[View online](https://guoyunhe.me/rabbit-lyrics/#example-multiple-lines)
 
-.rabbit-lyrics .line {
-  padding: 4px;
-}
+### Mini view mode
 
-.rabbit-lyrics .line.active {
-  color: #00eeff;
-}
-```
+[View online](https://guoyunhe.me/rabbit-lyrics/#example-mini-view-mode)
+
+### Full view mode
+
+[View online](https://guoyunhe.me/rabbit-lyrics/#example-full-view-mode)

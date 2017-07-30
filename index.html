@@ -82,6 +82,11 @@ code {
     padding: 30px 0;
 }
 
+a {
+    color: inherit;
+    text-decoration: underline solid #41bdff;
+}
+
 @media screen and (max-width: 768px) {
     body {
         display: block;
@@ -111,12 +116,24 @@ code {
 </aside>
 <main>
     <div class="container">
-        <h1 id="introduction">Introduction</h1>
+        <h1 id="introduction">Rabbit Lyrics</h1>
 
         <p>
             <strong>Rabbit Lyrics</strong> is an audio and timed lyrics synchronizer for web.
             No jQuery required. No dependencies.
         </p>
+
+        <p>
+            Yes, here are already many similar things but Rabbit Lyrics has something special:
+        </p>
+
+        <ol>
+            <li>Highlight multiple lines at the same time. Especially useful when adding translations.</li>
+            <li>Do not depend on jQuery or any other libraries.</li>
+            <li>Predefined themes for different web design.</li>
+        </ol>
+
+        <p><a href="https://github.com/guoyunhe/rabbit-lyrics-wp">WordPress plugin</a> is also available.</p>
 
         <h1 id="install">Install?</h1>
 
@@ -134,51 +151,57 @@ import RabbitLyrics from 'rabbit-lyrics'</pre>
 
         <p>or link files in HTML:</p>
         <pre>
-&lt;link href="node_modules/rabbit-lyrics/dist/rabbit-lyrics.css" rel="stylesheet" type="text/css"/&gt;
-&lt;script src="node_modules/rabbit-lyrics/dist/rabbit-lyrics.js" type="text/javascript"&gt;&lt;/script&gt;</pre>
+&lt;link href="path/to/rabbit-lyrics/dist/rabbit-lyrics.css" rel="stylesheet" type="text/css"/&gt;
+&lt;script src="path/to/rabbit-lyrics/dist/rabbit-lyrics.js" type="text/javascript"&gt;&lt;/script&gt;</pre>
 
         <h1 id="initialize">Initialize</h1>
 
-        <h2>HTML</h2>
+        <h2 id="initialize-with-html">HTML</h2>
+
+        <p>
+            When using HTML markups to initialize lyrics, you must add class <code>rabbit-lyrics</code> to the lyrics container.
+        </p>
+
+        <p>Idealy, add <code>data-media</code> attribute to specify the selector of audio or video element that you want to synchronize with lyrics. If <code>data-media</code> is not provided or element cannot be found, it will search first audio or video element before lyrics container.</p>
 
         <pre>
-&lt;audio id="a-little-song" src="..." controls&gt;&lt;/audio&gt;
+&lt;audio id="audio-1" controls&gt;
+    &lt;source src="audio-1.ogg" type="audio/ogg"&gt;
+    &lt;source src="audio-1.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
 
-&lt;div class="rabbit-lyrics" data-media="#a-little-song"&gt;
+&lt;div class="rabbit-lyrics" data-media="#audio-1"&gt;
 [00:05.00] This is a little song
-[00:05.00] The song that nobody knows
+[00:07.00] The song that nobody knows
 ...
 &lt;/div&gt;
 </pre>
 
-        <p>
-            Element with class <code>rabbit-lyrics</code> will be initialized as lyrics. It will use
-            media element specified by <code>data-media</code> attribute. If no <code>data-media</code>
-            found, it will try to search first audio or video element before.
-        </p>
+        <h2 id="initialize-with-js">JavaScript</h2>
 
-        <h2>JavaScript</h2>
+        <p>When using JavaScript to initialize lyrics, you must <strong>NOT</strong> add <code>rabbit-lyrics</code> class to lyrics container.</p>
+
+        <p>If <code>mediaElement</code> is not provided or element cannot be found, it will search first audio or video element before lyrics container.</p>
 
         <pre>
-&lt;audio id="music" src="..." controls&gt;&lt;/audio&gt;
+&lt;audio id="audio-1" controls&gt;
+    &lt;source src="audio-1.ogg" type="audio/ogg"&gt;
+    &lt;source src="audio-1.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
 
-&lt;div id="lyrics"&gt;
+&lt;div id="lyrics-1"&gt;
 [00:05.00] This is a little song
-[00:05.00] The song that nobody knows
+[00:07.00] The song that nobody knows
 ...
 &lt;/div&gt;
 </pre>
 
         <pre>
 new RabbitLyrics({
-    element: document.findElementById('lyrics'),
-    mediaElement: document.findElementById('music')
+    element: document.findElementById('lyrics-1'),
+    mediaElement: document.findElementById('audio-1')
 })
 </pre>
-
-        <p>
-            If no <code>mediaElement</code> option provided, it will try to search first audio or video element before.
-        </p>
 
         <h1 id="options">Options</h1>
 
