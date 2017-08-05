@@ -113,11 +113,12 @@ class RabbitLyrics {
      */
     constructor(options) {
         this.element = options.element;
+        this.element.classList.add(['rabbit-lyrics']);
 
         if (options.mediaElement) {
             this.mediaElement = options.mediaElement;
         } else {
-            this.findMediaElement();
+            this.mediaElement = this.findMediaElementBefore(this.element);
         }
 
         if (options.viewMode) {
@@ -151,16 +152,45 @@ class RabbitLyrics {
 
     /**
      * Find first audio or video element before lyrics element. Only used when
-     * no mediaElement was specified.
+     * no mediaElement was specified. If nothing was found, return null.
+     * @param {HTMLElement} element The start point element
+     * @return {HTMLMediaElement|null}
      */
-    findMediaElement() {
-        this.mediaElement = this.element.previousElementSibling;
+    findMediaElementBefore(element) {
+        if (!element) {
+            return null;
+        }
+
+        let elem = element.previousElementSibling;
+        // First, lookup siblings before
+        while (elem) {
+            if (elem.tagName.toLowerCase() === 'audio' || elem.tagName.toLowerCase() === 'video') {
+                return elem;
+            } else {
+                const mediaChildren = elem.querySelector('audio, video');
+                if (mediaChildren) {
+                    return mediaChildren[mediaChildren.length - 1];
+                }
+            }
+            elem = elem.previousElementSibling;
+        }
+
+        if (element.parentElement) {
+            return this.findMediaElementBefore(element.parentElement);
+        } else {
+            return null;
+        }
     }
 
     /**
      * Parse lyrics syntax to HTML with data properties
      */
     parseLyrics() {
+        // Do not do anything if no lyrics element was found
+        if (!this.element) {
+            return this;
+        }
+
         let lines = this.element.textContent.trim().split('\n');
 
         this.element.textContent = '';
@@ -230,6 +260,11 @@ class RabbitLyrics {
      * Enable lyrics playback
      */
     enableLyrics() {
+        // Do not do anything if no media element was found
+        if (!this.mediaElement) {
+            return this;
+        }
+
         // Rest scroll bar
         this.element.scrollTop = 0;
 
