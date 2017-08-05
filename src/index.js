@@ -88,18 +88,18 @@ export default class RabbitLyrics {
             return null;
         }
 
-        let elem = element.previousElementSibling;
+        let previousElement = element.previousElementSibling;
         // First, lookup siblings before
-        while (elem) {
-            if (elem.tagName.toLowerCase() === 'audio' || elem.tagName.toLowerCase() === 'video') {
-                return elem;
+        while (previousElement) {
+            if (previousElement.tagName.toLowerCase() === 'audio' || previousElement.tagName.toLowerCase() === 'video') {
+                return previousElement;
             } else {
-                const mediaChildren = elem.querySelector('audio, video');
+                const mediaChildren = previousElement.querySelector('audio, video');
                 if (mediaChildren) {
                     return mediaChildren[mediaChildren.length - 1];
                 }
             }
-            elem = elem.previousElementSibling;
+            previousElement = previousElement.previousElementSibling;
         }
 
         if (element.parentElement) {
