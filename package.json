@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guoyunhe/rabbit-lyrics.git"
+    "url": "git+https://gitlab.com/guoyunhe/rabbit-lyrics.git"
   },
   "keywords": [
     "lyrics",
@@ -19,12 +19,9 @@
   "author": "Guo Yunhe",
   "license": "GPL-3.0+",
   "bugs": {
-    "url": "https://github.com/guoyunhe/rabbit-lyrics/issues"
+    "url": "https://gitlab.com/guoyunhe/rabbit-lyrics/issues"
   },
-  "homepage": "https://github.com/guoyunhe/rabbit-lyrics#readme",
-  "dependencies": {
-    "jquery": "^3.2.1"
-  },
+  "homepage": "https://gitlab.com/guoyunhe/rabbit-lyrics#readme",
   "devDependencies": {
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.0",
