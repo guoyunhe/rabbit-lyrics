@@ -34,12 +34,18 @@ export default class RabbitLyrics {
    * @param {Object} options
    * @param {HTMLDivElement} options.element The block this contains lyrics
    * @param {HTMLMediaElement} options.mediaElement The audio or video element to synchronize
-   * @param {string} options.viewMode Modes of lyrics view box, available values: default, mini
+   * @param {string} options.viewMode Modes of lyrics view box, available values: default, mini, full
    * @param {string} options.alignment Lyrics text alighment, available values: left, center, right
+   * @param {number} options.height Height of lyrics. Only works with default view mode
    */
   constructor(options) {
     this.element = options.element;
-    this.element.classList.add(["rabbit-lyrics"]);
+
+    if (this.element.classList.contains("rabbit-lyrics-enabled")) {
+      return;
+    }
+
+    this.element.classList.add("rabbit-lyrics");
 
     if (options.mediaElement) {
       this.mediaElement = options.mediaElement;
@@ -52,16 +58,14 @@ export default class RabbitLyrics {
     } else {
       this.viewMode = "default";
     }
+    this.element.classList.add("rabbit-lyrics-" + this.viewMode);
 
-    switch (this.viewMode) {
-      case "mini":
-        this.element.classList.add("rabbit-lyrics-mini");
-        break;
-      case "full":
-        this.element.classList.add("rabbit-lyrics-full");
-        break;
-      default:
-        break;
+    if (this.viewMode === "default" && options.height) {
+      this.element.style.height = options.height + "px";
+    }
+
+    if (options.alignment) {
+      this.element.style.textAlign = options.alignment;
     }
 
     this.scrollerIntervalDuration = 200;
@@ -201,7 +205,7 @@ export default class RabbitLyrics {
     this.mediaElement.ontimeupdate = this.synchronizer;
 
     // Add enabled status class. Avoid initializing the same element twice
-    this.element.classList.add(["rabbit-lyrics-enabled"]);
+    this.element.classList.add("rabbit-lyrics-enabled");
 
     return this;
   }
@@ -292,13 +296,13 @@ document.addEventListener(
       let element = elements[i];
       let mediaElements = document.querySelector(element.dataset.media);
       let mediaElement = mediaElements ? mediaElements[0] : null;
-      let { viewMode, height, theme } = element.dataset;
+      let { viewMode, height, alignment } = element.dataset;
       let options = {
         element,
         mediaElement,
         viewMode,
         height,
-        theme
+        alignment
       };
 
       new RabbitLyrics(options);
