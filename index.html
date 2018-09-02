@@ -1,175 +1,176 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rabbit Lyrics</title>
-<link href="dist/rabbit-lyrics.css" rel="stylesheet" type="text/css"/>
-<script src="dist/rabbit-lyrics.js" type="text/javascript"></script>
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    background: #ffffff;
-    color: #555555;
-    font-family: Roboto, "Noto Sans", "Open Sans", Arial, Helvetica, sans-serif;
-    display: flex;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabbit Lyrics</title>
+    <script src="dist/rabbit-lyrics.js" type="text/javascript"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            color: #555555;
+            font-family: Roboto, "Noto Sans", "Open Sans", Arial, Helvetica, sans-serif;
+            display: flex;
+        }
 
-h1 {
-    font-weight: 200;
-    font-size: 60px;
-    border-bottom: 2px solid #555555;
-    width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-    width: -moz-max-content;    /* Firefox/Gecko */
-    width: -webkit-max-content; /* Chrome */
-}
+        h1 {
+            font-weight: 200;
+            font-size: 60px;
+            border-bottom: 2px solid #555555;
+            width: intrinsic;
+            /* Safari/WebKit uses a non-standard name */
+            width: -moz-max-content;
+            /* Firefox/Gecko */
+            width: -webkit-max-content;
+            /* Chrome */
+        }
 
-audio {
-    display: block;
-    width: 100%;
-    margin: 20px 0;
-}
+        audio {
+            display: block;
+            width: 100%;
+            margin: 20px 0;
+        }
 
-aside {
-    flex: 0 0 300px;
-    padding: 10px 20px;
-    background: #000000;
-    color: #ffffff;
-    line-height: 2em;
-}
+        aside {
+            flex: 0 0 300px;
+            padding: 10px 20px;
+            background: #000000;
+            color: #ffffff;
+            line-height: 2em;
+        }
 
-aside ol {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-}
+        aside ol {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
 
-aside a {
-    color: #ffffff;
-    text-decoration: none;
-}
+        aside a {
+            color: #ffffff;
+            text-decoration: none;
+        }
 
-main {
-    flex: 1 1 600px;
-    max-width: 100%;
-    overflow-x: hidden;
-}
+        main {
+            flex: 1 1 600px;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
 
-pre {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    background: #f0f0f0;
-    padding: 10px;
-    max-width: 100%;
-    overflow-x: hidden;
-}
+        pre {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            background: #f0f0f0;
+            padding: 10px;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
 
-code {
-    background: #f0f0f0;
-    padding: 3px;
-    border-radius: 3px;
-}
+        code {
+            background: #f0f0f0;
+            padding: 3px;
+            border-radius: 3px;
+        }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-.section {
-    padding: 30px 0;
-}
+        .section {
+            padding: 30px 0;
+        }
 
-a {
-    color: inherit;
-    text-decoration: underline solid #41bdff;
-}
+        a {
+            color: inherit;
+            text-decoration: underline solid #41bdff;
+        }
 
-@media screen and (max-width: 768px) {
-    body {
-        display: block;
-        font-size: 12px;
-    }
+        @media screen and (max-width: 768px) {
+            body {
+                display: block;
+                font-size: 12px;
+            }
 
-    h1 {
-        font-size: 40px;
-        font-weight: 300;
-    }
+            h1 {
+                font-size: 40px;
+                font-weight: 300;
+            }
 
-    aside ol {
-        position: relative;
-    }
-}
-</style>
+            aside ol {
+                position: relative;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<aside>
-    <ol>
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#install">Install</a></li>
-        <li><a href="#initialize">Initialize</a></li>
-        <li><a href="#options">Options</a></li>
-        <li><a href="#examples">Examples</a></li>
-    </ol>
-</aside>
-<main>
-    <div class="container">
-        <h1 id="introduction">Rabbit Lyrics</h1>
-        <p>
-            <a class="github-button" href="https://github.com/guoyunhe" data-show-count="true" data-size="large" aria-label="Follow @guoyunhe on GitHub">Follow @guoyunhe</a>
-            <a class="github-button" href="https://github.com/guoyunhe/rabbit-lyrics" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star guoyunhe/rabbit-lyrics on GitHub">Star</a>
-            <a class="github-button" href="https://github.com/guoyunhe/rabbit-lyrics/issues" data-icon="octicon-issue-opened" data-size="large" data-show-count="true" aria-label="Issue guoyunhe/rabbit-lyrics on GitHub">Issue</a>
-            <a class="github-button" href="https://github.com/guoyunhe/rabbit-lyrics/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork guoyunhe/rabbit-lyrics on GitHub">Fork</a>
-        </p>
-        <p>
-            <strong>Rabbit Lyrics</strong> is an audio and timed lyrics synchronizer for web.
-            No jQuery required. No dependencies.
-        </p>
-
-        <p>
-            Yes, here are already many similar things but Rabbit Lyrics has something special:
-        </p>
-
+    <aside>
         <ol>
-            <li>Highlight multiple lines at the same time. Especially useful when adding translations.</li>
-            <li>Do not depend on jQuery or any other libraries.</li>
-            <li>Predefined themes for different web design.</li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#install">Install</a></li>
+            <li><a href="#initialize">Initialize</a></li>
+            <li><a href="#options">Options</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="https://gitlab.com/guoyunhe/rabbit-lyrics">GitLab</a></li>
         </ol>
+    </aside>
+    <main>
+        <div class="container">
+            <h1 id="introduction">Rabbit Lyrics</h1>
+            <p>
+                <strong>Rabbit Lyrics</strong> is an audio and timed lyrics synchronizer for web. No jQuery required. No
+                dependencies.
+            </p>
 
-        <p><a href="https://github.com/guoyunhe/rabbit-lyrics-wp">WordPress plugin</a> is also available.</p>
+            <p>
+                Yes, here are already many similar things but Rabbit Lyrics has something special:
+            </p>
 
-        <h1 id="install">Install?</h1>
+            <ol>
+                <li>Highlight multiple lines at the same time. Especially useful when adding translations.</li>
+                <li>Do not depend on jQuery or any other libraries.</li>
+                <li>Predefined themes for different web design.</li>
+            </ol>
 
-        <p>
-            You can install through NPM or download from
-            <a href="https://github.com/guoyunhe/rabbit-lyrics/releases">here</a>.
-        </p>
+            <p><a href="https://gitlab.com/guoyunhe/rabbit-lyrics-wp">WordPress plugin</a> is also available.</p>
 
-        <pre>npm install rabbit-lyrics --save</pre>
+            <h1 id="install">Install?</h1>
 
-        <p>To import it into your project, you can either use Webpack way (require sass-loader):</p>
+            <p>
+                You can install through NPM or download from
+                <a href="https://gitlab.com/guoyunhe/rabbit-lyrics/releases">here</a>.
+            </p>
 
-        <pre>
+            <pre>npm install rabbit-lyrics --save</pre>
+
+            <p>To import it into your project, you can either use Webpack way (require sass-loader):</p>
+
+            <pre>
 import RabbitLyrics from 'rabbit-lyrics'</pre>
 
-        <p>or link files in HTML:</p>
-        <pre>
+            <p>or link files in HTML:</p>
+            <pre>
 &lt;link href="path/to/rabbit-lyrics/dist/rabbit-lyrics.css" rel="stylesheet" type="text/css"/&gt;
 &lt;script src="path/to/rabbit-lyrics/dist/rabbit-lyrics.js" type="text/javascript"&gt;&lt;/script&gt;</pre>
 
-        <h1 id="initialize">Initialize</h1>
+            <h1 id="initialize">Initialize</h1>
 
-        <h2 id="initialize-with-html">HTML</h2>
+            <h2 id="initialize-with-html">HTML</h2>
 
-        <p>
-            When using HTML markups to initialize lyrics, you must add class <code>rabbit-lyrics</code> to the lyrics container.
-        </p>
+            <p>
+                When using HTML markups to initialize lyrics, you must add class <code>rabbit-lyrics</code> to the lyrics
+                container.
+            </p>
 
-        <p>Idealy, add <code>data-media</code> attribute to specify the selector of audio or video element that you want to synchronize with lyrics. If <code>data-media</code> is not provided or element cannot be found, it will search first audio or video element before lyrics container.</p>
+            <p>Idealy, add <code>data-media</code> attribute to specify the selector of audio or video element that you want
+                to synchronize with lyrics. If <code>data-media</code> is not provided or element cannot be found, it will
+                search first audio or video element before lyrics container.</p>
 
-        <pre>
+            <pre>
 &lt;audio id="audio-1" controls&gt;
     &lt;source src="audio-1.ogg" type="audio/ogg"&gt;
     &lt;source src="audio-1.mp3" type="audio/mpeg"&gt;
@@ -182,13 +183,15 @@ import RabbitLyrics from 'rabbit-lyrics'</pre>
 &lt;/div&gt;
 </pre>
 
-        <h2 id="initialize-with-js">JavaScript</h2>
+            <h2 id="initialize-with-js">JavaScript</h2>
 
-        <p>When using JavaScript to initialize lyrics, you must <strong>NOT</strong> add <code>rabbit-lyrics</code> class to lyrics container.</p>
+            <p>When using JavaScript to initialize lyrics, you must <strong>NOT</strong> add <code>rabbit-lyrics</code> class
+                to lyrics container.</p>
 
-        <p>If <code>mediaElement</code> is not provided or element cannot be found, it will search first audio or video element before lyrics container.</p>
+            <p>If <code>mediaElement</code> is not provided or element cannot be found, it will search first audio or video
+                element before lyrics container.</p>
 
-        <pre>
+            <pre>
 &lt;audio id="audio-1" controls&gt;
     &lt;source src="audio-1.ogg" type="audio/ogg"&gt;
     &lt;source src="audio-1.mp3" type="audio/mpeg"&gt;
@@ -201,116 +204,67 @@ import RabbitLyrics from 'rabbit-lyrics'</pre>
 &lt;/div&gt;
 </pre>
 
-        <pre>
+            <pre>
 new RabbitLyrics({
     element: document.findElementById('lyrics-1'),
     mediaElement: document.findElementById('audio-1')
 })
 </pre>
 
-        <h1 id="options">Options</h1>
+            <h1 id="options">Options</h1>
 
-        <h2>element</h2>
+            <h2>element</h2>
 
-        <p>Type: <code>HTMLDivElement</code></p>
+            <p>Type: <code>HTMLDivElement</code></p>
 
-        <p>The <code>div</code> element that contains lyrics.</p>
+            <p>The <code>div</code> element that contains lyrics.</p>
 
-        <h2>mediaElement</h2>
+            <h2>mediaElement</h2>
 
-        <p>Type: <code>HTMLMediaElement</code> (audio or video elements)</p>
+            <p>Type: <code>HTMLMediaElement</code> (audio or video elements)</p>
 
-        <p>Default: the first audio or video element before</p>
+            <p>Default: the first audio or video element before</p>
 
-        <p>HTML attribute: <code>data-media-element</code> (selector of media element)</p>
+            <p>HTML attribute: <code>data-media-element</code> (selector of media element)</p>
 
-        <h2>viewMode</h2>
+            <h2>viewMode</h2>
 
-        <p>Type: <code>string</code></p>
+            <p>Type: <code>string</code></p>
 
-        <p>Default: <code>'default'</code></p>
+            <p>Default: <code>'default'</code></p>
 
-        <p>HTML attribute: <code>data-view-mode</code></p>
+            <p>HTML attribute: <code>data-view-mode</code></p>
 
-        <ul>
-            <li>default</li>
-            <li>mini</li>
-            <li>full</li>
-        </ul>
+            <ul>
+                <li>default</li>
+                <li>mini</li>
+                <li>full</li>
+            </ul>
 
-        <h1 id="examples">Examples</h1>
+            <h1 id="examples">Examples</h1>
 
-        <h2>Basic</h2>
+            <h2>Basic</h2>
 
-        <audio id="audio1" controls>
-            <source src="http://guoyunhe.me/zh/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.ogg" type="audio/ogg">
-            <source src="http://guoyunhe.me/zh/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="rabbit-lyrics" data-audio="#audio1">
-[00:00.00]谁のことを考えてるの?
-[00:03.10]ハートのスペース争夺戦
-[00:05.76]戦况的に 一进一退で
-[00:10.56]油断ならないな
-[00:11.70]あのね 今のとこ ほんの数％しか
-[00:16.73]アイツの心に 居场所がないんだ
-[00:21.38]
-[00:21.51]制服のポケット
-[00:24.05]ホンネを忍ばせて
-[00:26.71]そっと えりを正す
-[00:31.71]そんな简単には
-[00:34.38]手の内 明かせない
-[00:36.90]あくまでまだ 様子见の段阶
-[00:41.81]
-[00:42.01]だけど本当はね
-[00:44.59]见破って欲しいの
-[00:47.25]淡い期待に胸 ときめかして
-[00:51.74]チラチラと见てる
-[00:54.97]
-[00:56.09]オンナノコの大事なモノ(意地悪で)
-[00:58.73]オトコノコの大事なコト(ムカつく)
-[01:01.53]引くに引けない それぞれの事情
-[01:06.26]ほかに何も考えらんない(真っ直ぐで)
-[01:09.03]一瞬だって よそ见できない(ニブいね)
-[01:11.68]充実感 あふれるほどに
-[01:16.25]満たしてあげるよ
-[01:17.32]条件ちらつかせ 様子うかがって见てる
-[01:22.50]お互いWin-Winな トリヒキしようよ
-[01:27.20]
-[01:27.33]魔法少女だって
-[01:29.87]地底の民だって
-[01:32.60]悩むとこは同じ
-[01:37.71]异星の姫だって
-[01:40.13]オバケの少女だって
-[01:42.71]ドキドキして みんな恋をする
-
-[01:47.99]好きなタイプだとか
-[01:50.51]理想の告白を
-[01:53.21]思い描いた时
-[01:55.66]谁の颜が浮かんできちゃうの?!
-
-[02:01.82]突然 チカラ涌いてきたり(不思议だよ)
-[02:04.46]ホロリ 优しさが染みたり(なぜなの)
-[02:07.15]それは全部 谁のせいかな
-[02:12.04]ライバルには负けたくない(それなのに)
-[02:14.74]だけどアイツには胜てない(なぜなの)
-[02:17.47]それってちょっと问题あるけど
-[02:22.15]もう手遅れだね
-[02:25.56]
-[02:45.74]オンナノコの大事なモノ(意地悪で)
-[02:48.20]オトコノコの大事なコト(ムカつく)
-[02:51.02]引くに引けない それぞれの事情
-[02:55.95]ほかに何も考えらんない(真っ直ぐで)
-[02:58.67]一瞬だって よそ见できない(ニブいね)
-[03:01.31]充実感 あふれるほどに
-[03:06.01]満たしてあげるよ
-[03:07.02]条件ちらつかせ 様子うかがって
-[03:11.54]そんな感じの トリヒキしようよ
-[03:17.42]あのね今のとこ ほんの数％しか
-[03:22.48]アイツの心に 居场所がないんだ
-[03:27.19]
-        </div>
-        <pre>
+            <audio id="audio1" controls>
+                <source src="https://guoyunhe.me/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.ogg" type="audio/ogg">
+                <source src="https://guoyunhe.me/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.mp3" type="audio/mpeg">                Your
+                browser does not support the audio element.
+            </audio>
+            <div class="rabbit-lyrics" data-audio="#audio1">
+                [00:00.00]谁のことを考えてるの? [00:03.10]ハートのスペース争夺戦 [00:05.76]戦况的に 一进一退で [00:10.56]油断ならないな [00:11.70]あのね 今のとこ ほんの数％しか [00:16.73]アイツの心に
+                居场所がないんだ [00:21.38] [00:21.51]制服のポケット [00:24.05]ホンネを忍ばせて [00:26.71]そっと えりを正す [00:31.71]そんな简単には [00:34.38]手の内
+                明かせない [00:36.90]あくまでまだ 様子见の段阶 [00:41.81] [00:42.01]だけど本当はね [00:44.59]见破って欲しいの [00:47.25]淡い期待に胸 ときめかして [00:51.74]チラチラと见てる
+                [00:54.97] [00:56.09]オンナノコの大事なモノ(意地悪で) [00:58.73]オトコノコの大事なコト(ムカつく) [01:01.53]引くに引けない それぞれの事情 [01:06.26]ほかに何も考えらんない(真っ直ぐで)
+                [01:09.03]一瞬だって よそ见できない(ニブいね) [01:11.68]充実感 あふれるほどに [01:16.25]満たしてあげるよ [01:17.32]条件ちらつかせ 様子うかがって见てる [01:22.50]お互いWin-Winな
+                トリヒキしようよ [01:27.20] [01:27.33]魔法少女だって [01:29.87]地底の民だって [01:32.60]悩むとこは同じ [01:37.71]异星の姫だって [01:40.13]オバケの少女だって
+                [01:42.71]ドキドキして みんな恋をする [01:47.99]好きなタイプだとか [01:50.51]理想の告白を [01:53.21]思い描いた时 [01:55.66]谁の颜が浮かんできちゃうの?!
+                [02:01.82]突然 チカラ涌いてきたり(不思议だよ) [02:04.46]ホロリ 优しさが染みたり(なぜなの) [02:07.15]それは全部 谁のせいかな [02:12.04]ライバルには负けたくない(それなのに)
+                [02:14.74]だけどアイツには胜てない(なぜなの) [02:17.47]それってちょっと问题あるけど [02:22.15]もう手遅れだね [02:25.56] [02:45.74]オンナノコの大事なモノ(意地悪で)
+                [02:48.20]オトコノコの大事なコト(ムカつく) [02:51.02]引くに引けない それぞれの事情 [02:55.95]ほかに何も考えらんない(真っ直ぐで) [02:58.67]一瞬だって よそ见できない(ニブいね)
+                [03:01.31]充実感 あふれるほどに [03:06.01]満たしてあげるよ [03:07.02]条件ちらつかせ 様子うかがって [03:11.54]そんな感じの トリヒキしようよ [03:17.42]あのね今のとこ
+                ほんの数％しか [03:22.48]アイツの心に 居场所がないんだ [03:27.19]
+            </div>
+            <pre>
 &lt;audio id="audio-1" controls&gt;
     &lt;source src="..." type="audio/ogg"&gt;
     &lt;source src="..." type="audio/mpeg"&gt;
@@ -330,245 +284,58 @@ new RabbitLyrics({
 &lt;/div&gt;
 </pre>
 
-        <h2>Multiple lines and translations</h2>
+            <h2>Multiple lines and translations</h2>
 
-        <p>
-            The following lyrics contains Japanese, Rōmaji and Chinese translation.
-            It highlights three lines at the same time.
-        </p>
+            <p>
+                The following lyrics contains Japanese, Rōmaji and Chinese translation. It highlights three lines at the same time.
+            </p>
 
-        <audio id="audio-2" controls>
-            <source src="http://guoyunhe.me/zh/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.ogg" type="audio/ogg">
-            <source src="http://guoyunhe.me/zh/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="rabbit-lyrics" data-media="#audio-2">
-[00:00.00] 谁のことを考えてるの?
-da re no ko to wo ka n ga e te ru no?
-究竟在想谁的事情呢？
+            <audio id="audio-2" controls>
+                <source src="https://guoyunhe.me/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.ogg" type="audio/ogg">
+                <source src="https://guoyunhe.me/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.mp3" type="audio/mpeg">                Your
+                browser does not support the audio element.
+            </audio>
+            <div class="rabbit-lyrics" data-media="#audio-2">
+                [00:00.00] 谁のことを考えてるの? da re no ko to wo ka n ga e te ru no? 究竟在想谁的事情呢？ [00:03.10] ハートのスペース争夺戦 HAATO no SUPEESU so u da tsu
+                se n 心的位置争夺战 [00:05.76] 戦況的に　一進一退で ze n ryo u te ki ni i sshi n i tta i de 就戰況而言　一進一退 [00:10.56] 油断ならないな
+                yu u da n na ra na i na 不可以大意 [00:11.70] あのね　今のとこ　ほんの数％しか a no ne i ma no to ko ho n no ka zu Percent shi
+                ka 其實呀　現在只佔據少數幾％位置 [00:16.73] アイツの心に居場所がないんだ AITSU no ko ko ro ni i ba sho ga na i n da 在他的心中根本沒有棲身之所 [00:21.38]
+                [00:21.51] 制服のポケット se i fu ku no POKEETO 制服的口袋裡 [00:24.05] ホンネを忍ばせて ho n ne wo shi no ba se te 隱藏了真心的話語 [00:26.71]
+                そっと　えりを正す so tto e ri wo ta da su 悄悄地　整理衣領 [00:31.71] そんな簡単には so n na ka n ta n ni wa 怎麼可能會如此簡單 [00:34.38]
+                手の内　明かせない te no chi a ka se na i 瞭解他緊握著的話語 [00:36.90] あくまでまだ　様子見の段階 a ku ma de ma da yo u su mi no da n ka
+                i 到最後還是只能在遠處觀望的階段 [00:41.81] [00:42.01] だけど本当はね da ke do ho n to u wa ne 但是實際上是 [00:44.59] 見破って欲しいの mi ya
+                bu tte ho shi i no 非常想要看清一切 [00:47.25] 淡い期待に胸　ときめかして a wa i ki ta i ni mu ne to ki me ka shi te 懷著些許期待的內心　不斷鼓動著
+                [00:51.74] チラチラと見てる CHIRA CHIRA to mi te ru 躲躲藏藏地偷看著 [00:54.97] [00:56.09] オンナノコの大事なモノ（意地悪で） ONNA NO KO no
+                da i ji na MONO (i ji wa ru de) 女孩子最重要的東西（不懷好意地） [00:58.73] オトコノコの大事なコト（ムカつく) OTOKO NO KO no da i ji na KOTO
+                (MU KA tsu ku) 男孩子最重要的事情（令人生氣） [01:01.53] 引くに引けない　それぞれの事情 hi ku ni hi ke na i so re zo re no ji jyo u 進退兩難的　許多事情
+                [01:06.26] ほかに何も考えらんない（真っ直ぐで） ho ka ni na ni mo ka n ga e ra n na i (ma ssu gu gu de) 其他什麼的就不用多考慮了（勇往直前地）
+                [01:09.03] 一瞬だって　よそ見できない（ニブいね） i sshu n da tte yo so mi de ki na i (NI BU i ne) 只是一瞬間　卻還不看過來（太遲鈍了） [01:11.68]
+                充実感　あふれるほどに jyu u ji tsu ka n a fu re ru ho do ni 充實感就像滿溢出來似地 [01:16.25] 満たしてあげるよ mi ta shi te a ge ru yo
+                漸漸滿足了我 [01:17.32] 条件ちらつかせ　様子うかがって見てる jyo u ke n chi ra tsu ka se yo u su u ka ga tte mi te ru 說出條件吧　再稍微觀察狀況吧
+                [01:22.50] お互いWin-Winな　トリヒキしようよ o ta ga i Win-Win na TORI HIKI shi n yo u yo 彼此都是Win-Win　接受這份交易吧 [01:27.20]
+                [01:27.33] 魔法少女だって ma ho u sho u jyo da tte 就算是魔法少女 [01:29.87] 地底の民だって chi te i no ta mi da tte 就算是地底人 [01:32.60]
+                悩むことは同じ na ya mu ko to wa o na ji 煩惱的事情也都一樣 [01:37.71] 異星の姫だって i se i no hi me da tte 就算是異星公主 [01:40.13]
+                オバケの少女だって OBAKE no sho u jyo u da tte 就算是幽靈少女 [01:42.71] ドキドキして　みんな恋をする DOKI DOKI shi te mi n na ko i wo
+                su ru 大家心跳都撲通撲通地戀愛了 [01:47.99] 好きなタイプだとか su ki na TAIBU da to ka 喜歡什麼類型之類的 [01:50.51] 理想の告白を ri so u no ko
+                ku ha ku wo 想像著最理想 [01:53.21] 思い描いた时 o mo i e ga i da to ki 的告白時機 [01:55.66] 誰の顔が浮かんできちゃうの？！ da re no ka
+                o ga u ka n de ki cha u no?! 會是誰的臉龐浮現在腦海中呢？！ [02:01.82] 突然　チカラ湧いてきたり（不思議だよ） to tsu ze n CHIKARA wa i te ki
+                ta ri (fu shi gi da yo 突然間　力量不斷地湧出（真是不可思議） [02:04.46] ホロリ　優しさが染みたり（なぜなの） HORORI ya sa shi sa ga shi mi ta
+                ri (na ze na no) 感人的　溫柔感染著眼眶（為什麼呢） [02:07.15] それは全部　誰のせいかな so re wa ze n bu da re no se i ka na 這些全部都是誰的責任呢？
+                [02:12.04] ライバルには負けたくない（それなのに） RAIBARU ni wa ma ke ta ku na i (so re na no ni) 身為對手的我是不會認輸的（即使這樣） [02:14.74]
+                だけどアイツには勝てない（なぜなの） da ke do AITSU ni wa ka te na i (na ze na no) 但是與那傢伙為敵是贏不了的（為什麼呢） [02:17.47] それってちょっと問題あるけど
+                so re tte cho tto mo n da i a ru ke do 那麼樣這是不是有些問題呢？ [02:22.15] もう手遅れだね mo u te o ku re da ne 已經來不及了 [02:25.56]
+                [02:45.74] オンナノコの大事なモノ（意地悪で） ONNA NO KO no da i ji na MONO (i ji wa ru de) 女孩子最重要的東西（不懷好意地） [02:48.20] オトコノコの大事なコト（ムカつく）
+                OTOKO NO KO no da i ji na KOTO (MU KA tsu ku) 男孩子最重要的事情（令人生氣） [02:51.02] 引くに引けない　それぞれの事情 hi ku ni hi ke na
+                i so re zo re no ji jyo u 進退兩難的　許多事情 [02:55.95] ほかに何も考えらんない（真っ直ぐで） ho ka ni na ni mo ka n ga e ra n na i
+                (ma ssu gu gu de) 其他什麼的就不用多考慮了（勇往直前地） [02:58.67] 一瞬だって　よそ見できない（ニブいね） i sshu n da tte yo so mi de ki na i
+                (NI BU i ne) 只是一瞬間　卻還不看過來（太遲鈍了） [03:01.31] 充実感　あふれるほどに jyu u ji tsu ka n a fu re ru ho do ni 充實感就像滿溢出來似地
+                [03:06.01] 満たしてあげるよ mi ta shi te a ge ru yo 漸漸滿足了我 [03:07.02] 条件ちらつかせ　様子うかがって jyo u ke n chi ra tsu ka se
+                yo u su u ka ga tte 說出條件吧　再稍微觀察狀況吧 [03:11.54] そんな感じの　トリヒキしようよ so n na ka n ji no TORI HIKI shi yo u yo 去感受這樣的感覺　接受這份交易吧
+                [03:17.42] あのね今のこと　ほんの数％しか a no ne i ma no ko to ho n no ka zu Percent shi ka 其實呀　現在只佔據少數幾％位置 [03:22.48]
+                アイツの心に　居場所がないんだ AITSU no ko ko ro ni i ba sho ga na i n da 在他的心中根本沒有棲身之所 [03:27.19]
+            </div>
 
-[00:03.10] ハートのスペース争夺戦
-HAATO no SUPEESU so u da tsu se n
-心的位置争夺战
-
-[00:05.76] 戦況的に　一進一退で
-ze n ryo u te ki ni i sshi n i tta i de
-就戰況而言　一進一退
-
-[00:10.56] 油断ならないな
-yu u da n na ra na i na
-不可以大意
-
-[00:11.70] あのね　今のとこ　ほんの数％しか
-a no ne i ma no to ko ho n no ka zu Percent shi ka
-其實呀　現在只佔據少數幾％位置
-
-[00:16.73] アイツの心に居場所がないんだ
-AITSU no ko ko ro ni i ba sho ga na i n da
-在他的心中根本沒有棲身之所
-
-[00:21.38]
-
-[00:21.51] 制服のポケット
-se i fu ku no POKEETO
-制服的口袋裡
-
-[00:24.05] ホンネを忍ばせて
-ho n ne wo shi no ba se te
-隱藏了真心的話語
-
-[00:26.71] そっと　えりを正す
-so tto e ri wo ta da su
-悄悄地　整理衣領
-
-[00:31.71] そんな簡単には
-so n na ka n ta n ni wa
-怎麼可能會如此簡單
-
-[00:34.38] 手の内　明かせない
-te no chi a ka se na i
-瞭解他緊握著的話語
-
-[00:36.90] あくまでまだ　様子見の段階
-a ku ma de ma da yo u su mi no da n ka i
-到最後還是只能在遠處觀望的階段
-
-[00:41.81]
-
-[00:42.01] だけど本当はね
-da ke do ho n to u wa ne
-但是實際上是
-
-[00:44.59] 見破って欲しいの
-mi ya bu tte ho shi i no
-非常想要看清一切
-
-[00:47.25] 淡い期待に胸　ときめかして
-a wa i ki ta i ni mu ne to ki me ka shi te
-懷著些許期待的內心　不斷鼓動著
-
-[00:51.74] チラチラと見てる
-CHIRA CHIRA to mi te ru
-躲躲藏藏地偷看著
-
-[00:54.97]
-
-[00:56.09] オンナノコの大事なモノ（意地悪で）
-ONNA NO KO no da i ji na MONO (i ji wa ru de)
-女孩子最重要的東西（不懷好意地）
-
-[00:58.73] オトコノコの大事なコト（ムカつく)
-OTOKO NO KO no da i ji na KOTO (MU KA tsu ku)
-男孩子最重要的事情（令人生氣）
-
-[01:01.53] 引くに引けない　それぞれの事情
-hi ku ni hi ke na i so re zo re no ji jyo u
-進退兩難的　許多事情
-
-[01:06.26] ほかに何も考えらんない（真っ直ぐで）
-ho ka ni na ni mo ka n ga e ra n na i (ma ssu gu gu de)
-其他什麼的就不用多考慮了（勇往直前地）
-
-[01:09.03] 一瞬だって　よそ見できない（ニブいね）
-i sshu n da tte yo so mi de ki na i (NI BU i ne)
-只是一瞬間　卻還不看過來（太遲鈍了）
-
-[01:11.68] 充実感　あふれるほどに
-jyu u ji tsu ka n a fu re ru ho do ni
-充實感就像滿溢出來似地
-
-[01:16.25] 満たしてあげるよ
-mi ta shi te a ge ru yo
-漸漸滿足了我
-
-[01:17.32] 条件ちらつかせ　様子うかがって見てる
-jyo u ke n chi ra tsu ka se yo u su u ka ga tte mi te ru
-說出條件吧　再稍微觀察狀況吧
-
-[01:22.50] お互いWin-Winな　トリヒキしようよ
-o ta ga i Win-Win na TORI HIKI shi n yo u yo
-彼此都是Win-Win　接受這份交易吧
-
-[01:27.20]
-
-[01:27.33] 魔法少女だって
-ma ho u sho u jyo da tte
-就算是魔法少女
-
-[01:29.87] 地底の民だって
-chi te i no ta mi da tte
-就算是地底人
-
-[01:32.60] 悩むことは同じ
-na ya mu ko to wa o na ji
-煩惱的事情也都一樣
-
-[01:37.71] 異星の姫だって
-i se i no hi me da tte
-就算是異星公主
-
-[01:40.13] オバケの少女だって
-OBAKE no sho u jyo u da tte
-就算是幽靈少女
-
-[01:42.71] ドキドキして　みんな恋をする
-DOKI DOKI shi te mi n na ko i wo su ru
-大家心跳都撲通撲通地戀愛了
-
-[01:47.99] 好きなタイプだとか
-su ki na TAIBU da to ka
-喜歡什麼類型之類的
-
-[01:50.51] 理想の告白を
-ri so u no ko ku ha ku wo
-想像著最理想
-
-[01:53.21] 思い描いた时
-o mo i e ga i da to ki
-的告白時機
-
-[01:55.66] 誰の顔が浮かんできちゃうの？！
-da re no ka o ga u ka n de ki cha u no?!
-會是誰的臉龐浮現在腦海中呢？！
-
-[02:01.82] 突然　チカラ湧いてきたり（不思議だよ）
-to tsu ze n CHIKARA wa i te ki ta ri (fu shi gi da yo
-突然間　力量不斷地湧出（真是不可思議）
-
-[02:04.46] ホロリ　優しさが染みたり（なぜなの）
-HORORI ya sa shi sa ga shi mi ta ri (na ze na no)
-感人的　溫柔感染著眼眶（為什麼呢）
-
-[02:07.15] それは全部　誰のせいかな
-so re wa ze n bu da re no se i ka na
-這些全部都是誰的責任呢？
-
-[02:12.04] ライバルには負けたくない（それなのに）
-RAIBARU ni wa ma ke ta ku na i (so re na no ni)
-身為對手的我是不會認輸的（即使這樣）
-
-[02:14.74] だけどアイツには勝てない（なぜなの）
-da ke do AITSU ni wa ka te na i (na ze na no)
-但是與那傢伙為敵是贏不了的（為什麼呢）
-
-[02:17.47] それってちょっと問題あるけど
-so re tte cho tto mo n da i a ru ke do
-那麼樣這是不是有些問題呢？
-
-[02:22.15] もう手遅れだね
-mo u te o ku re da ne
-已經來不及了
-
-[02:25.56]
-
-[02:45.74] オンナノコの大事なモノ（意地悪で）
-ONNA NO KO no da i ji na MONO (i ji wa ru de)
-女孩子最重要的東西（不懷好意地）
-
-[02:48.20] オトコノコの大事なコト（ムカつく）
-OTOKO NO KO no da i ji na KOTO (MU KA tsu ku)
-男孩子最重要的事情（令人生氣）
-
-[02:51.02] 引くに引けない　それぞれの事情
-hi ku ni hi ke na i so re zo re no ji jyo u
-進退兩難的　許多事情
-
-[02:55.95] ほかに何も考えらんない（真っ直ぐで）
-ho ka ni na ni mo ka n ga e ra n na i (ma ssu gu gu de)
-其他什麼的就不用多考慮了（勇往直前地）
-
-[02:58.67] 一瞬だって　よそ見できない（ニブいね）
-i sshu n da tte yo so mi de ki na i (NI BU i ne)
-只是一瞬間　卻還不看過來（太遲鈍了）
-
-[03:01.31] 充実感　あふれるほどに
-jyu u ji tsu ka n a fu re ru ho do ni
-充實感就像滿溢出來似地
-
-[03:06.01] 満たしてあげるよ
-mi ta shi te a ge ru yo
-漸漸滿足了我
-
-[03:07.02] 条件ちらつかせ　様子うかがって
-jyo u ke n chi ra tsu ka se yo u su u ka ga tte
-說出條件吧　再稍微觀察狀況吧
-
-[03:11.54] そんな感じの　トリヒキしようよ
-so n na ka n ji no TORI HIKI shi yo u yo
-去感受這樣的感覺　接受這份交易吧
-
-[03:17.42] あのね今のこと　ほんの数％しか
-a no ne i ma no ko to ho n no ka zu Percent shi ka
-其實呀　現在只佔據少數幾％位置
-
-[03:22.48] アイツの心に　居場所がないんだ
-AITSU no ko ko ro ni i ba sho ga na i n da
-在他的心中根本沒有棲身之所
-
-[03:27.19]
-        </div>
-
-        <pre>
+            <pre>
 &lt;audio id="audio-2" controls&gt;
     &lt;source src="..." type="audio/ogg"&gt;
     &lt;source src="..." type="audio/mpeg"&gt;
@@ -603,86 +370,36 @@ AITSU no ko ko ro ni i ba sho ga na i n da
 
 &lt;/div&gt;
 </pre>
-        <h2>Mini view mode</h2>
+            <h2>Mini view mode</h2>
 
-        <audio id="audio-3" controls>
-            <source src="http://guoyunhe.me/zh/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.ogg" type="audio/ogg">
-            <source src="http://guoyunhe.me/zh/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="rabbit-lyrics" data-media="#audio-3" data-view-mode="mini">
-         [00:00.00]谁のことを考えてるの?
-[00:03.10]ハートのスペース争夺戦
-[00:05.76]戦况的に 一进一退で
-[00:10.56]油断ならないな
-[00:11.70]あのね 今のとこ ほんの数％しか
-[00:16.73]アイツの心に 居场所がないんだ
-[00:21.38]
-[00:21.51]制服のポケット
-[00:24.05]ホンネを忍ばせて
-[00:26.71]そっと えりを正す
-[00:31.71]そんな简単には
-[00:34.38]手の内 明かせない
-[00:36.90]あくまでまだ 様子见の段阶
-[00:41.81]
-[00:42.01]だけど本当はね
-[00:44.59]见破って欲しいの
-[00:47.25]淡い期待に胸 ときめかして
-[00:51.74]チラチラと见てる
-[00:54.97]
-[00:56.09]オンナノコの大事なモノ(意地悪で)
-[00:58.73]オトコノコの大事なコト(ムカつく)
-[01:01.53]引くに引けない それぞれの事情
-[01:06.26]ほかに何も考えらんない(真っ直ぐで)
-[01:09.03]一瞬だって よそ见できない(ニブいね)
-[01:11.68]充実感 あふれるほどに
-[01:16.25]満たしてあげるよ
-[01:17.32]条件ちらつかせ 様子うかがって见てる
-[01:22.50]お互いWin-Winな トリヒキしようよ
-[01:27.20]
-[01:27.33]魔法少女だって
-[01:29.87]地底の民だって
-[01:32.60]悩むとこは同じ
-[01:37.71]异星の姫だって
-[01:40.13]オバケの少女だって
-[01:42.71]ドキドキして みんな恋をする
+            <audio id="audio-3" controls>
+                <source src="https://guoyunhe.me/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.ogg" type="audio/ogg">
+                <source src="https://guoyunhe.me/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.mp3" type="audio/mpeg">                Your
+                browser does not support the audio element.
+            </audio>
+            <div class="rabbit-lyrics" data-media="#audio-3" data-view-mode="mini">
+                [00:00.00]谁のことを考えてるの? [00:03.10]ハートのスペース争夺戦 [00:05.76]戦况的に 一进一退で [00:10.56]油断ならないな [00:11.70]あのね 今のとこ ほんの数％しか [00:16.73]アイツの心に
+                居场所がないんだ [00:21.38] [00:21.51]制服のポケット [00:24.05]ホンネを忍ばせて [00:26.71]そっと えりを正す [00:31.71]そんな简単には [00:34.38]手の内
+                明かせない [00:36.90]あくまでまだ 様子见の段阶 [00:41.81] [00:42.01]だけど本当はね [00:44.59]见破って欲しいの [00:47.25]淡い期待に胸 ときめかして [00:51.74]チラチラと见てる
+                [00:54.97] [00:56.09]オンナノコの大事なモノ(意地悪で) [00:58.73]オトコノコの大事なコト(ムカつく) [01:01.53]引くに引けない それぞれの事情 [01:06.26]ほかに何も考えらんない(真っ直ぐで)
+                [01:09.03]一瞬だって よそ见できない(ニブいね) [01:11.68]充実感 あふれるほどに [01:16.25]満たしてあげるよ [01:17.32]条件ちらつかせ 様子うかがって见てる [01:22.50]お互いWin-Winな
+                トリヒキしようよ [01:27.20] [01:27.33]魔法少女だって [01:29.87]地底の民だって [01:32.60]悩むとこは同じ [01:37.71]异星の姫だって [01:40.13]オバケの少女だって
+                [01:42.71]ドキドキして みんな恋をする [01:47.99]好きなタイプだとか [01:50.51]理想の告白を [01:53.21]思い描いた时 [01:55.66]谁の颜が浮かんできちゃうの?!
+                [02:01.82]突然 チカラ涌いてきたり(不思议だよ) [02:04.46]ホロリ 优しさが染みたり(なぜなの) [02:07.15]それは全部 谁のせいかな [02:12.04]ライバルには负けたくない(それなのに)
+                [02:14.74]だけどアイツには胜てない(なぜなの) [02:17.47]それってちょっと问题あるけど [02:22.15]もう手遅れだね [02:25.56] [02:45.74]オンナノコの大事なモノ(意地悪で)
+                [02:48.20]オトコノコの大事なコト(ムカつく) [02:51.02]引くに引けない それぞれの事情 [02:55.95]ほかに何も考えらんない(真っ直ぐで) [02:58.67]一瞬だって よそ见できない(ニブいね)
+                [03:01.31]充実感 あふれるほどに [03:06.01]満たしてあげるよ [03:07.02]条件ちらつかせ 様子うかがって [03:11.54]そんな感じの トリヒキしようよ [03:17.42]あのね今のとこ
+                ほんの数％しか [03:22.48]アイツの心に 居场所がないんだ [03:27.19]
+            </div>
 
-[01:47.99]好きなタイプだとか
-[01:50.51]理想の告白を
-[01:53.21]思い描いた时
-[01:55.66]谁の颜が浮かんできちゃうの?!
-
-[02:01.82]突然 チカラ涌いてきたり(不思议だよ)
-[02:04.46]ホロリ 优しさが染みたり(なぜなの)
-[02:07.15]それは全部 谁のせいかな
-[02:12.04]ライバルには负けたくない(それなのに)
-[02:14.74]だけどアイツには胜てない(なぜなの)
-[02:17.47]それってちょっと问题あるけど
-[02:22.15]もう手遅れだね
-[02:25.56]
-[02:45.74]オンナノコの大事なモノ(意地悪で)
-[02:48.20]オトコノコの大事なコト(ムカつく)
-[02:51.02]引くに引けない それぞれの事情
-[02:55.95]ほかに何も考えらんない(真っ直ぐで)
-[02:58.67]一瞬だって よそ见できない(ニブいね)
-[03:01.31]充実感 あふれるほどに
-[03:06.01]満たしてあげるよ
-[03:07.02]条件ちらつかせ 様子うかがって
-[03:11.54]そんな感じの トリヒキしようよ
-[03:17.42]あのね今のとこ ほんの数％しか
-[03:22.48]アイツの心に 居场所がないんだ
-[03:27.19]
-        </div>
-
-        <pre>
+            <pre>
 &lt;div class="rabbit-lyrics" data-media="#audio-3" data-view-mode="mini"&gt;
 
     ...
 
 &lt;/div&gt;
-</pre>
-        or
-        <pre>
+</pre> or
+            <pre>
 new RabbitLyrics({
     element: document.getElementById('lyrics-3'),
     mediaElement: document.getElementById('audio-3'),
@@ -690,91 +407,42 @@ new RabbitLyrics({
 });
 </pre>
 
-        <h2>Full view mode</h2>
-        <audio id="audio-4" controls>
-            <source src="http://guoyunhe.me/zh/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.ogg" type="audio/ogg">
-            <source src="http://guoyunhe.me/zh/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="rabbit-lyrics" data-media="#audio-4" data-view-mode="full">
-[00:00.00]谁のことを考えてるの?
-[00:03.10]ハートのスペース争夺戦
-[00:05.76]戦况的に 一进一退で
-[00:10.56]油断ならないな
-[00:11.70]あのね 今のとこ ほんの数％しか
-[00:16.73]アイツの心に 居场所がないんだ
-[00:21.38]
-[00:21.51]制服のポケット
-[00:24.05]ホンネを忍ばせて
-[00:26.71]そっと えりを正す
-[00:31.71]そんな简単には
-[00:34.38]手の内 明かせない
-[00:36.90]あくまでまだ 様子见の段阶
-[00:41.81]
-[00:42.01]だけど本当はね
-[00:44.59]见破って欲しいの
-[00:47.25]淡い期待に胸 ときめかして
-[00:51.74]チラチラと见てる
-[00:54.97]
-[00:56.09]オンナノコの大事なモノ(意地悪で)
-[00:58.73]オトコノコの大事なコト(ムカつく)
-[01:01.53]引くに引けない それぞれの事情
-[01:06.26]ほかに何も考えらんない(真っ直ぐで)
-[01:09.03]一瞬だって よそ见できない(ニブいね)
-[01:11.68]充実感 あふれるほどに
-[01:16.25]満たしてあげるよ
-[01:17.32]条件ちらつかせ 様子うかがって见てる
-[01:22.50]お互いWin-Winな トリヒキしようよ
-[01:27.20]
-[01:27.33]魔法少女だって
-[01:29.87]地底の民だって
-[01:32.60]悩むとこは同じ
-[01:37.71]异星の姫だって
-[01:40.13]オバケの少女だって
-[01:42.71]ドキドキして みんな恋をする
-
-[01:47.99]好きなタイプだとか
-[01:50.51]理想の告白を
-[01:53.21]思い描いた时
-[01:55.66]谁の颜が浮かんできちゃうの?!
-
-[02:01.82]突然 チカラ涌いてきたり(不思议だよ)
-[02:04.46]ホロリ 优しさが染みたり(なぜなの)
-[02:07.15]それは全部 谁のせいかな
-[02:12.04]ライバルには负けたくない(それなのに)
-[02:14.74]だけどアイツには胜てない(なぜなの)
-[02:17.47]それってちょっと问题あるけど
-[02:22.15]もう手遅れだね
-[02:25.56]
-[02:45.74]オンナノコの大事なモノ(意地悪で)
-[02:48.20]オトコノコの大事なコト(ムカつく)
-[02:51.02]引くに引けない それぞれの事情
-[02:55.95]ほかに何も考えらんない(真っ直ぐで)
-[02:58.67]一瞬だって よそ见できない(ニブいね)
-[03:01.31]充実感 あふれるほどに
-[03:06.01]満たしてあげるよ
-[03:07.02]条件ちらつかせ 様子うかがって
-[03:11.54]そんな感じの トリヒキしようよ
-[03:17.42]あのね今のとこ ほんの数％しか
-[03:22.48]アイツの心に 居场所がないんだ
-[03:27.19]
-        </div>
-        <pre>
+            <h2>Full view mode</h2>
+            <audio id="audio-4" controls>
+                <source src="https://guoyunhe.me/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.ogg" type="audio/ogg">
+                <source src="https://guoyunhe.me/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.mp3" type="audio/mpeg">                Your
+                browser does not support the audio element.
+            </audio>
+            <div class="rabbit-lyrics" data-media="#audio-4" data-view-mode="full">
+                [00:00.00]谁のことを考えてるの? [00:03.10]ハートのスペース争夺戦 [00:05.76]戦况的に 一进一退で [00:10.56]油断ならないな [00:11.70]あのね 今のとこ ほんの数％しか [00:16.73]アイツの心に
+                居场所がないんだ [00:21.38] [00:21.51]制服のポケット [00:24.05]ホンネを忍ばせて [00:26.71]そっと えりを正す [00:31.71]そんな简単には [00:34.38]手の内
+                明かせない [00:36.90]あくまでまだ 様子见の段阶 [00:41.81] [00:42.01]だけど本当はね [00:44.59]见破って欲しいの [00:47.25]淡い期待に胸 ときめかして [00:51.74]チラチラと见てる
+                [00:54.97] [00:56.09]オンナノコの大事なモノ(意地悪で) [00:58.73]オトコノコの大事なコト(ムカつく) [01:01.53]引くに引けない それぞれの事情 [01:06.26]ほかに何も考えらんない(真っ直ぐで)
+                [01:09.03]一瞬だって よそ见できない(ニブいね) [01:11.68]充実感 あふれるほどに [01:16.25]満たしてあげるよ [01:17.32]条件ちらつかせ 様子うかがって见てる [01:22.50]お互いWin-Winな
+                トリヒキしようよ [01:27.20] [01:27.33]魔法少女だって [01:29.87]地底の民だって [01:32.60]悩むとこは同じ [01:37.71]异星の姫だって [01:40.13]オバケの少女だって
+                [01:42.71]ドキドキして みんな恋をする [01:47.99]好きなタイプだとか [01:50.51]理想の告白を [01:53.21]思い描いた时 [01:55.66]谁の颜が浮かんできちゃうの?!
+                [02:01.82]突然 チカラ涌いてきたり(不思议だよ) [02:04.46]ホロリ 优しさが染みたり(なぜなの) [02:07.15]それは全部 谁のせいかな [02:12.04]ライバルには负けたくない(それなのに)
+                [02:14.74]だけどアイツには胜てない(なぜなの) [02:17.47]それってちょっと问题あるけど [02:22.15]もう手遅れだね [02:25.56] [02:45.74]オンナノコの大事なモノ(意地悪で)
+                [02:48.20]オトコノコの大事なコト(ムカつく) [02:51.02]引くに引けない それぞれの事情 [02:55.95]ほかに何も考えらんない(真っ直ぐで) [02:58.67]一瞬だって よそ见できない(ニブいね)
+                [03:01.31]充実感 あふれるほどに [03:06.01]満たしてあげるよ [03:07.02]条件ちらつかせ 様子うかがって [03:11.54]そんな感じの トリヒキしようよ [03:17.42]あのね今のとこ
+                ほんの数％しか [03:22.48]アイツの心に 居场所がないんだ [03:27.19]
+            </div>
+            <pre>
 &lt;div class="rabbit-lyrics" data-media="#audio-4" data-view-mode="full"&gt;
 
     ...
 
 &lt;/div&gt;
-</pre>
-        or
-        <pre>
+</pre> or
+            <pre>
 new RabbitLyrics({
     element: document.getElementById('lyrics-4'),
     mediaElement: document.getElementById('audio-4'),
     viewMode: 'full'
 });
 </pre>
-    </div><!-- /.container -->
-</main>
+        </div><!-- /.container -->
+    </main>
 </body>
+
 </html>

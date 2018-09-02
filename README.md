@@ -1,49 +1,69 @@
 # Rabbit Lyrics
 
-__Rabbit Lyrics__ is an audio and timed lyrics synchronizer for web. No jQuery required. No dependencies.
+**Rabbit Lyrics** is an audio and timed lyrics synchronizer for web. No jQuery
+required. No any dependencies.
 
 Yes, here are already many similar things but Rabbit Lyrics has something special:
 
-
-1. Highlight multiple lines at the same time. Especially useful when adding translations.
+1. Highlight multiple lines at the same time. Useful when adding translations.
 2. Do not depend on jQuery or any other libraries.
 3. Predefined themes for different web design.
 
+[WordPress plugin](https://gitlab.com/guoyunhe/rabbit-lyrics-wp) is also available.
 
-[WordPress plugin](https://github.com/guoyunhe/rabbit-lyrics-wp) is also available.
+## Get & Use
 
-## Install?
+### Without build tools
 
-> I have never thought one day, people have to INSTALL JavaScript :thinking:
-
-You can install through NPM
-
-```
-npm install rabbit-lyrics --save
-```
-
-or download from [here](https://github.com/guoyunhe/rabbit-lyrics/releases).
-
-To import it into your project, you can either use Webpack way (require sass-loader):
-
-```js
-import RabbitLyrics from 'rabbit-lyrics'
-```
+Download from [here](https://gitlab.com/guoyunhe/rabbit-lyrics/releases).
 
 or link files in HTML:
 
 ```html
-<link href="path/to/rabbit-lyrics/dist/rabbit-lyrics.css" rel="stylesheet" type="text/css"/>
 <script src="path/to/rabbit-lyrics/dist/rabbit-lyrics.js" type="text/javascript">
+```
+
+### Use Webpack
+
+> I have never thought, one day, people have to INSTALL JavaScript :thinking:
+
+Install it through NPM
+
+```bash
+npm install rabbit-lyrics --save
+```
+
+Import it into your project (require sass-loader):
+
+```js
+import RabbitLyrics from "rabbit-lyrics";
+```
+
+### Use Gulp+Browserify
+
+Install it through NPM
+
+```bash
+npm install rabbit-lyrics --save
+```
+
+Import JavaScript:
+
+```js
+const RabbitLyrics = require("rabbit-lyrics/dist/rabbit-lyrics");
 ```
 
 ## Initialize
 
-### HTML
+### HTML attributes
 
-When using HTML markups to initialize lyrics, you must add class `rabbit-lyrics` to the lyrics container.
+When using HTML markups to initialize lyrics, you must add class `rabbit-lyrics`
+to the lyrics container.
 
-Idealy, add `data-media` attribute to specify the selector of audio or video element that you want to synchronize with lyrics. If `data-media` is not provided or element cannot be found, it will search first audio or video element before lyrics container.
+Idealy, add `data-media` attribute to specify the selector of audio or video
+element that you want to synchronize with lyrics. If `data-media` is not provided
+or element cannot be found, it will search first audio or video element before
+lyrics container.
 
 ```html
 <audio id="audio-1" controls>
@@ -60,9 +80,11 @@ Idealy, add `data-media` attribute to specify the selector of audio or video ele
 
 ### JavaScript
 
-When using JavaScript to initialize lyrics, you must __NOT__ add `rabbit-lyrics` class to lyrics container.
+When using JavaScript to initialize lyrics, you must **NOT** add `rabbit-lyrics`
+class to lyrics container.
 
-If `mediaElement` is not provided or element cannot be found, it will search first audio or video element before lyrics container.
+If `mediaElement` is not provided or element cannot be found, it will search first
+audio or video element before lyrics container.
 
 ```html
 <audio id="audio-1" controls>
@@ -79,8 +101,8 @@ If `mediaElement` is not provided or element cannot be found, it will search fir
 
 ```js
 new RabbitLyrics({
-  element: document.findElementById('lyrics-1'),
-  mediaElement: document.findElementById('audio-1')
+  element: document.findElementById("lyrics-1"),
+  mediaElement: document.findElementById("audio-1")
 });
 ```
 
@@ -108,26 +130,26 @@ Default: `'default'`
 
 HTML attribute: `data-view-mode`
 
-* default
-* mini
-* full
+- default
+- mini
+- full
+
+## Custom Styles
+
+Rabbit Lyrics comes with a minimum style. You can override it with your own CSS:
+
+```css
+.rabbit-lyrics {
+  border: 1px solid #cccccc;
+}
+
+.rabbit-lyrics .line.active {
+  background: #ff0000;
+  color: #ffff00;
+  font-weight: bold;
+}
+```
 
 ## Examples
 
 [View all examples online](https://guoyunhe.me/rabbit-lyrics/#examples)
-
-### Basic
-
-[View online](https://guoyunhe.me/rabbit-lyrics/#example-basic)
-
-### Multiple lines and translations
-
-[View online](https://guoyunhe.me/rabbit-lyrics/#example-multiple-lines)
-
-### Mini view mode
-
-[View online](https://guoyunhe.me/rabbit-lyrics/#example-mini-view-mode)
-
-### Full view mode
-
-[View online](https://guoyunhe.me/rabbit-lyrics/#example-full-view-mode)

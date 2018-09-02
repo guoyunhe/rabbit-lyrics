@@ -1,0 +1,38 @@
+/* Framed view mode (default) */
+
+.rabbit-lyrics {
+  position: relative; /* Must be relative, otherwise cannot calculate offset */
+  height: 16.5em;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.rabbit-lyrics .line {
+  min-height: 1.5em;
+}
+
+.rabbit-lyrics .line.active {
+  color: #41bdff;
+}
+
+/* Mini view mode */
+
+.rabbit-lyrics-mini {
+  height: 1.5em;
+  overflow-y: hidden;
+}
+
+.rabbit-lyrics-mini .line {
+  display: none;
+}
+
+.rabbit-lyrics-mini .line.active {
+  display: inline-block;
+}
+
+/* Full view mode, no scroll bar */
+
+.rabbit-lyrics-full {
+  height: auto;
+  overflow-y: initial;
+}

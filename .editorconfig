@@ -9,10 +9,10 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{js|scss}]
+[*.{js|css|html}]
 charset = utf-8
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 # Matches the exact files either package.json or .travis.yml
 [{package.json,.travis.yml}]
