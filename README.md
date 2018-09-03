@@ -11,51 +11,45 @@ Yes, here are already many similar things but Rabbit Lyrics has something specia
 
 [WordPress plugin](https://gitlab.com/guoyunhe/rabbit-lyrics-wp) is also available.
 
-## Get & Use
+## Download
 
-### Without build tools
+### Direct download
 
 Download from [here](https://gitlab.com/guoyunhe/rabbit-lyrics/releases).
 
-or link files in HTML:
+### NPM Install
+
+> I have never thought, one day, people have to INSTALL JavaScript :thinking:
+
+```bash
+npm install rabbit-lyrics --save
+```
+
+## Import
+
+### Link in HTML
 
 ```html
 <script src="path/to/rabbit-lyrics/dist/rabbit-lyrics.js" type="text/javascript">
 ```
 
-### Use Webpack
+### Import with Webpack/Browserify
 
-> I have never thought, one day, people have to INSTALL JavaScript :thinking:
-
-Install it through NPM
-
-```bash
-npm install rabbit-lyrics --save
-```
-
-Import it into your project (require sass-loader):
+ES6:
 
 ```js
 import RabbitLyrics from "rabbit-lyrics";
 ```
 
-### Use Gulp+Browserify
-
-Install it through NPM
-
-```bash
-npm install rabbit-lyrics --save
-```
-
-Import JavaScript:
+CommonJS:
 
 ```js
 const RabbitLyrics = require("rabbit-lyrics/dist/rabbit-lyrics");
 ```
 
-## Initialize
+## Usage
 
-### HTML attributes
+### Method 1: HTML
 
 When using HTML markups to initialize lyrics, you must add class `rabbit-lyrics`
 to the lyrics container.
@@ -78,7 +72,7 @@ lyrics container.
 </div>
 ```
 
-### JavaScript
+### Method 2: JavaScript
 
 When using JavaScript to initialize lyrics, you must **NOT** add `rabbit-lyrics`
 class to lyrics container.
