@@ -5,9 +5,9 @@
  *
  * License: GNU General Public License version 3
  * Author: Guo Yunhe <yunhe.guo@protonmail.com>
- * Home page: https://github.com/guoyunhe/rabbit-lyrics
- * Documentation: https://github.com/guoyunhe/rabbit-lyrics/wiki
- * Report bugs: https://github.com/guoyunhe/rabbit-lyrics/issues
+ * Home page: https://gitlab.com/guoyunhe/rabbit-lyrics
+ * Documentation: https://gitlab.com/guoyunhe/rabbit-lyrics/wiki
+ * Report bugs: https://gitlab.com/guoyunhe/rabbit-lyrics/issues
  */
 
 import "./index.css";
@@ -15,24 +15,23 @@ import "./index.css";
 /**
  * Rabbit Lyrics main class
  *
- * @prop {HTMLDivElement} element
+ * @prop {HTMLElement} element
  * @prop {HTMLMediaElement} mediaElement
- * @prop {HTMLDivElement[]} lineElements
+ * @prop {HTMLElement[]} lineElements
  * @prop {number} scrollerInterval
  *      Used to force stop previous scroller interval and set new interval
  * @prop {number} scrollerIntervalStep
  *      How long scroller interval should be executed, in milliseconds
  * @prop {number} scrollerIntervalDuration
- *      How long scroller interval could work, in milliseconds
+ *      How long scroller interval could work.
  * @prop {number} scrollerTimer
- *      Timer in milliseconds for scrolling animation. This is not an option
- *      but a status value that dynamically changes when playing
+ *      Countdown timer (ms) for scrolling animation.
  */
 export default class RabbitLyrics {
   /**
    * Constructor
    * @param {Object} options
-   * @param {HTMLDivElement} options.element The block this contains lyrics
+   * @param {HTMLElement} options.element The block this contains lyrics
    * @param {HTMLMediaElement} options.mediaElement The audio or video element to synchronize
    * @param {string} options.viewMode Modes of lyrics view box, available values: default, mini, full
    * @param {string} options.alignment Lyrics text alighment, available values: left, center, right
@@ -73,8 +72,8 @@ export default class RabbitLyrics {
     this.lineElements = [];
 
     // Bind this to event handlers
-    this.synchronizer = this.synchronizer.bind(this);
-    this.scroller = this.scroller.bind(this);
+    this.synchronize = this.synchronize.bind(this);
+    this.scroll = this.scroll.bind(this);
 
     this.parseLyrics();
     this.enableLyrics();
@@ -202,7 +201,7 @@ export default class RabbitLyrics {
     this.element.scrollTop = 0;
 
     // Bind playback update events
-    this.mediaElement.ontimeupdate = this.synchronizer;
+    this.mediaElement.ontimeupdate = this.synchronize;
 
     // Add enabled status class. Avoid initializing the same element twice
     this.element.classList.add("rabbit-lyrics-enabled");
@@ -210,7 +209,10 @@ export default class RabbitLyrics {
     return this;
   }
 
-  synchronizer() {
+  /**
+   * Synchronize media element time and lyrics lines
+   */
+  synchronize() {
     let time = this.mediaElement.currentTime;
     let changed = false; // If here are active lines changed
     let activeLineElements = [];
@@ -243,18 +245,21 @@ export default class RabbitLyrics {
         2;
       this.scrollTop = activeLinesOffsetTop - this.element.clientHeight / 2;
 
-      // Start scroller
+      // Start scrolling animation
       clearInterval(this.scrollerInterval);
       this.scrollerTimer = this.scrollerIntervalDuration;
       this.scrollerInterval = setInterval(
-        this.scroller,
+        this.scroll,
         this.scrollerIntervalStep
       );
     }
   }
 
-  scroller() {
-    // If it is already scrolled to position, stop interval
+  /**
+   * One step of scrolling animation
+   */
+  scroll() {
+    // If it is already scrolled to position, stop animation interval
     if (this.scrollerTimer <= 0) {
       clearInterval(this.scrollerInterval);
       return;

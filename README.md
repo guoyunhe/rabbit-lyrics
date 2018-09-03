@@ -110,7 +110,7 @@ new RabbitLyrics({
 
 ### element
 
-Type: `HTMLDivElement`
+Type: `HTMLElement`
 
 The `div` element that contains lyrics.
 
