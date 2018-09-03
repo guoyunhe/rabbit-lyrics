@@ -59,7 +59,7 @@ export default class RabbitLyrics {
     }
     this.element.classList.add("rabbit-lyrics-" + this.viewMode);
 
-    if (this.viewMode === "default" && options.height) {
+    if (this.viewMode !== "full" && options.height) {
       this.element.style.height = options.height + "px";
     }
 
