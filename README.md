@@ -112,15 +112,16 @@ new RabbitLyrics({
 
 Type: `HTMLElement`
 
-The `div` element that contains lyrics.
+The element that contains lyrics. If you use HTML markups, this is the element
+that contains `rabbit-lyrics` class.
 
 ### mediaElement
 
 Type: `HTMLMediaElement` (audio or video elements)
 
-Default: the first audio or video element before
+Default: the first audio or video element before lyrics container
 
-HTML attribute: `data-media-element` (selector of media element)
+HTML attribute: `data-media` (selector of media element)
 
 ### viewMode
 
@@ -130,9 +131,35 @@ Default: `'default'`
 
 HTML attribute: `data-view-mode`
 
+Availiable values:
+
 - default
 - mini
 - full
+
+### alignment
+
+Type: `string`
+
+Default: `'left'`
+
+HTML attribute: `data-alignment`
+
+Available values:
+
+- left
+- right
+- center
+
+It is the same as CSS `text-align` property.
+
+### height
+
+Type: `number`
+
+HTML attribute: `data-height`
+
+Height in pixels. Only effective with mini and default view mode.
 
 ## Custom Styles
 
