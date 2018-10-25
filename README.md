@@ -203,4 +203,4 @@ Rabbit Lyrics comes with a minimum style. You can override it with your own CSS:
 
 ## Examples
 
-[View all examples online](https://guoyunhe.me/rabbit-lyrics/#examples)
+[View all examples online](https://guoyunhe.gitlab.io/rabbit-lyrics/#examples)
