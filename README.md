@@ -164,10 +164,40 @@ Rabbit Lyrics comes with a minimum style. You can override it with your own CSS:
   border: 1px solid #cccccc;
 }
 
-.rabbit-lyrics .rabbit-lyrics__line--active {
+.rabbit-lyrics__line {
+  margin: 5px 0;
+}
+
+/* Active line */
+.rabbit-lyrics__line--active {
   background: #ff0000;
   color: #ffff00;
   font-weight: bold;
+}
+
+/* Selectors for view modes */
+.rabbit-lyrics--default {
+  ...
+}
+.rabbit-lyrics--mini {
+  ...
+}
+.rabbit-lyrics--full {
+  ...
+}
+
+/* Selectors for playing status */
+.rabbit-lyrics--playing {
+  ...
+}
+.rabbit-lyrics--paused {
+  ...
+}
+.rabbit-lyrics--waiting {
+  ...
+}
+.rabbit-lyrics--ended {
+  ...
 }
 ```
 

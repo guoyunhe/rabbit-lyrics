@@ -72,6 +72,7 @@ export default class RabbitLyrics {
     this.lineElements = [];
 
     // Bind this to event handlers
+    this.setStatus = this.setStatus.bind(this);
     this.synchronize = this.synchronize.bind(this);
     this.scroll = this.scroll.bind(this);
 
@@ -203,10 +204,43 @@ export default class RabbitLyrics {
     // Bind playback update events
     this.mediaElement.ontimeupdate = this.synchronize;
 
+    this.mediaElement.onplay = this.setStatus;
+    this.mediaElement.onplaying = this.setStatus;
+    this.mediaElement.onpause = this.setStatus;
+    this.mediaElement.onwaiting = this.setStatus;
+    this.mediaElement.onended = this.setStatus;
+
     // Add enabled status class. Avoid initializing the same element twice
     this.element.classList.add("rabbit-lyrics--enabled");
 
     return this;
+  }
+
+  /**
+   *
+   * @param {Event} e Media element event
+   */
+  setStatus(e) {
+    let status; // playing, paused, waiting, ended
+    switch (e.type) {
+      case 'play':
+      case 'playing':
+        status = 'playing';
+        break;
+      case 'pause':
+        status = 'paused';
+        break;
+      case 'waiting':
+        status = 'waiting';
+        break;
+      case 'ended':
+        status = 'ended';
+        break;
+    }
+    this.element.classList.remove("rabbit-lyrics--playing", "rabbit-lyrics--paused", "rabbit-lyrics--waiting", "rabbit-lyrics--ended");
+    if (status) {
+      this.element.classList.add("rabbit-lyrics--" + status);
+    }
   }
 
   /**

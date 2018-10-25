@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add alignment option.
 - Add height option.
 - Add changelog.
+- CSS class of playing status.
 
 ### Changed
 
