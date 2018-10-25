@@ -1,6 +1,6 @@
 {
   "name": "rabbit-lyrics",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "JavaScript audio and timed lyrics synchronizer",
   "main": "dist/rabbit-lyrics.js",
   "scripts": {
