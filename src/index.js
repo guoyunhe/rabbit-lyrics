@@ -40,7 +40,7 @@ export default class RabbitLyrics {
   constructor(options) {
     this.element = options.element;
 
-    if (this.element.classList.contains("rabbit-lyrics-enabled")) {
+    if (this.element.classList.contains("rabbit-lyrics--enabled")) {
       return;
     }
 
@@ -57,7 +57,7 @@ export default class RabbitLyrics {
     } else {
       this.viewMode = "default";
     }
-    this.element.classList.add("rabbit-lyrics-" + this.viewMode);
+    this.element.classList.add("rabbit-lyrics--" + this.viewMode);
 
     if (this.viewMode !== "full" && options.height) {
       this.element.style.height = options.height + "px";
@@ -135,7 +135,7 @@ export default class RabbitLyrics {
     for (let i = 0; i < lines.length; i++) {
       // Make a new <div> element for the lyrics line
       let lineElement = document.createElement("div");
-      lineElement.className = "line";
+      lineElement.className = "rabbit-lyrics__line";
       this.element.appendChild(lineElement);
       this.lineElements.push(lineElement);
 
@@ -204,7 +204,7 @@ export default class RabbitLyrics {
     this.mediaElement.ontimeupdate = this.synchronize;
 
     // Add enabled status class. Avoid initializing the same element twice
-    this.element.classList.add("rabbit-lyrics-enabled");
+    this.element.classList.add("rabbit-lyrics--enabled");
 
     return this;
   }
@@ -220,18 +220,18 @@ export default class RabbitLyrics {
     this.lineElements.forEach(element => {
       if (time >= element.dataset.start && time <= element.dataset.end) {
         // If line should be active
-        if (!element.classList.contains("active")) {
+        if (!element.classList.contains("rabbit-lyrics__line--active")) {
           // If it hasn't been activated
           changed = true;
-          element.classList.add("active");
+          element.classList.add("rabbit-lyrics__line--active");
         }
         activeLineElements.push(element);
       } else {
         // If line should be inactive
-        if (element.classList.contains("active")) {
+        if (element.classList.contains("rabbit-lyrics__line--active")) {
           // If it hasn't been deactivated
           changed = true;
-          element.classList.remove("active");
+          element.classList.remove("rabbit-lyrics__line--active");
         }
       }
     });

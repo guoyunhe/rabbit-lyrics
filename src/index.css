@@ -7,32 +7,32 @@
   overflow-y: auto;
 }
 
-.rabbit-lyrics .line {
+.rabbit-lyrics__line {
   min-height: 1.5em;
 }
 
-.rabbit-lyrics .line.active {
+.rabbit-lyrics__line--active {
   color: #41bdff;
 }
 
 /* Mini view mode */
 
-.rabbit-lyrics-mini {
+.rabbit-lyrics--mini {
   height: 1.5em;
   overflow-y: hidden;
 }
 
-.rabbit-lyrics-mini .line {
+.rabbit-lyrics--mini .rabbit-lyrics__line {
   display: none;
 }
 
-.rabbit-lyrics-mini .line.active {
+.rabbit-lyrics--mini .rabbit-lyrics__line--active {
   display: inline-block;
 }
 
 /* Full view mode, no scroll bar */
 
-.rabbit-lyrics-full {
+.rabbit-lyrics--full {
   height: auto;
   overflow-y: initial;
 }
