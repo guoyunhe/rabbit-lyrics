@@ -204,3 +204,11 @@ Rabbit Lyrics comes with a minimum style. You can override it with your own CSS:
 ## Examples
 
 [View all examples online](https://guoyunhe.gitlab.io/rabbit-lyrics/#examples)
+
+## Trouble Shooting
+
+### Audio and text out of synchronization when skipping
+
+If your MP3 files are recorded by some audio recording application, it can be improperly encoded. You can transcode the file with VLC or CloundConvert to MP3 or OGG. Then try again.
+
+If this doesn't help, submit an issue and I will try to help you!
