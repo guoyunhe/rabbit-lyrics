@@ -11,6 +11,8 @@ Yes, here are already many similar things but Rabbit Lyrics has something specia
 
 [WordPress plugin](https://gitlab.com/guoyunhe/rabbit-lyrics-wp) is also available.
 
+[Join the Telegram group](https://t.me/rabbit_lyrics)!
+
 ## Download
 
 ### Direct download
