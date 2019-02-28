@@ -345,8 +345,7 @@ document.addEventListener(
 
     for (let i = 0; i < elements.length; i++) {
       let element = elements[i];
-      let mediaElements = document.querySelector(element.dataset.media);
-      let mediaElement = mediaElements ? mediaElements[0] : null;
+      let mediaElement = document.querySelector(element.dataset.media);
       let { viewMode, height, alignment } = element.dataset;
       let options = {
         element,

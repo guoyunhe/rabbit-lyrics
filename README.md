@@ -67,7 +67,7 @@ lyrics container.
     <source src="audio-1.mp3" type="audio/mpeg">
 </audio>
 
-<div class="rabbit-lyrics" data-audio="#audio-1">
+<div class="rabbit-lyrics" data-media="#audio-1">
 [00:05.00] This is a little song
 [00:07.00] The song that nobody knows
 ...
