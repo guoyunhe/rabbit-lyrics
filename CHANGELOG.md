@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.1] 2019-02-28
+
 ### Fixed
 
 - Cannot specify media element [#6](https://github.com/guoyunhe/rabbit-lyrics/issues/6)
