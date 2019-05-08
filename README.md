@@ -9,7 +9,7 @@ Yes, here are already many similar things but Rabbit Lyrics has something specia
 2. Do not depend on jQuery or any other libraries.
 3. Predefined themes for different web design.
 
-[WordPress plugin](https://gitlab.com/guoyunhe/rabbit-lyrics-wp) is also available.
+[WordPress plugin](https://github.com/guoyunhe/rabbit-lyrics-wp) is also available.
 
 [Join the Telegram group](https://t.me/rabbit_lyrics)!
 
@@ -17,7 +17,7 @@ Yes, here are already many similar things but Rabbit Lyrics has something specia
 
 ### Direct download
 
-Download from [here](https://gitlab.com/guoyunhe/rabbit-lyrics/releases).
+Download from [here](https://github.com/guoyunhe/rabbit-lyrics/releases).
 
 ### NPM Install
 
@@ -205,7 +205,7 @@ Rabbit Lyrics comes with a minimum style. You can override it with your own CSS:
 
 ## Examples
 
-[View all examples online](https://guoyunhe.gitlab.io/rabbit-lyrics/#examples)
+[View all examples online](https://guoyunhe.github.io/rabbit-lyrics/#examples)
 
 ## Trouble Shooting
 

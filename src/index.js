@@ -5,9 +5,9 @@
  *
  * License: GNU General Public License version 3
  * Author: Guo Yunhe <yunhe.guo@protonmail.com>
- * Home page: https://gitlab.com/guoyunhe/rabbit-lyrics
- * Documentation: https://gitlab.com/guoyunhe/rabbit-lyrics/wiki
- * Report bugs: https://gitlab.com/guoyunhe/rabbit-lyrics/issues
+ * Home page: https://github.com/guoyunhe/rabbit-lyrics
+ * Documentation: https://github.com/guoyunhe/rabbit-lyrics/wiki
+ * Report bugs: https://github.com/guoyunhe/rabbit-lyrics/issues
  */
 
 import "./index.css";
