@@ -5,7 +5,8 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "rabbit-lyrics.js"
+    filename: "rabbit-lyrics.js",
+    library: 'RabbitLyrics'
   },
   module: {
     rules: [

@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.2]
+
+### Fixed
+
+- Webpack library export issues [#9](https://github.com/guoyunhe/rabbit-lyrics/issues/9)
+
 ## [1.1.1] 2019-02-28
 
 ### Fixed
@@ -73,3 +79,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Lyrics parser.
 - Lyrics synchronizer
 - Three sizes: tiny, medium, full.
+
+[Unreleased]: https://github.com/guoyunhe/rabbit-lyrics/compare/v1.1.2...HEAD
+[1.1.2]: https://github.com/guoyunhe/rabbit-lyrics/compare/v1.1.1...v1.1.2
+[1.1.1]: https://github.com/guoyunhe/rabbit-lyrics/compare/v1.1.0...v1.1.1
+[1.1.0]: https://github.com/guoyunhe/rabbit-lyrics/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/guoyunhe/rabbit-lyrics/compare/v0.1.2...v1.0.0
+[0.1.2]: https://github.com/guoyunhe/rabbit-lyrics/compare/v0.1.1...v0.1.2
+[0.1.1]: https://github.com/guoyunhe/rabbit-lyrics/compare/v0.1.0...v0.1.1
+[0.1.0]: https://github.com/guoyunhe/rabbit-lyrics/releases/tag/v0.1.0
