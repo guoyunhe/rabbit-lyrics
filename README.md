@@ -179,27 +179,27 @@ Rabbit Lyrics comes with a minimum style. You can override it with your own CSS:
 
 /* Selectors for view modes */
 .rabbit-lyrics--default {
-  ...
+  /* ... */
 }
 .rabbit-lyrics--mini {
-  ...
+  /* ... */
 }
 .rabbit-lyrics--full {
-  ...
+  /* ... */
 }
 
 /* Selectors for playing status */
 .rabbit-lyrics--playing {
-  ...
+  /* ... */
 }
 .rabbit-lyrics--paused {
-  ...
+  /* ... */
 }
 .rabbit-lyrics--waiting {
-  ...
+  /* ... */
 }
 .rabbit-lyrics--ended {
-  ...
+  /* ... */
 }
 ```
 
