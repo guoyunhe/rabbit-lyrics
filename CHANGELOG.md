@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Change license from GPLv3 to AGPLv3
+
 ## [1.2.0]
 
 ### Added
