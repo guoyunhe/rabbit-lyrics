@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.2.0]
+
+### Added
+
+- Support multiple lyrics. [#10](https://github.com/guoyunhe/rabbit-lyrics/issues/10)
+
 ## [1.1.2]
 
 ### Fixed
@@ -80,7 +86,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Lyrics synchronizer
 - Three sizes: tiny, medium, full.
 
-[Unreleased]: https://github.com/guoyunhe/rabbit-lyrics/compare/v1.1.2...HEAD
+[Unreleased]: https://github.com/guoyunhe/rabbit-lyrics/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/guoyunhe/rabbit-lyrics/compare/v1.1.2...v1.2.0
 [1.1.2]: https://github.com/guoyunhe/rabbit-lyrics/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/guoyunhe/rabbit-lyrics/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/guoyunhe/rabbit-lyrics/compare/v1.0.0...v1.1.0

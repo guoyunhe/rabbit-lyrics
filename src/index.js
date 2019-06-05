@@ -195,6 +195,7 @@ export default class RabbitLyrics {
   enableLyrics() {
     // Do not do anything if no media element was found
     if (!this.mediaElement) {
+      console.log('no media found');
       return this;
     }
 
@@ -202,13 +203,13 @@ export default class RabbitLyrics {
     this.element.scrollTop = 0;
 
     // Bind playback update events
-    this.mediaElement.ontimeupdate = this.synchronize;
+    this.mediaElement.addEventListener('timeupdate', this.synchronize);
 
-    this.mediaElement.onplay = this.setStatus;
-    this.mediaElement.onplaying = this.setStatus;
-    this.mediaElement.onpause = this.setStatus;
-    this.mediaElement.onwaiting = this.setStatus;
-    this.mediaElement.onended = this.setStatus;
+    this.mediaElement.addEventListener('play', this.setStatus);
+    this.mediaElement.addEventListener('playing',  this.setStatus);
+    this.mediaElement.addEventListener('pause',  this.setStatus);
+    this.mediaElement.addEventListener('waiting',  this.setStatus);
+    this.mediaElement.addEventListener('ended',  this.setStatus);
 
     // Add enabled status class. Avoid initializing the same element twice
     this.element.classList.add("rabbit-lyrics--enabled");
