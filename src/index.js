@@ -143,9 +143,9 @@ export default class RabbitLyrics {
       let line = lines[i].trim();
 
       // Look up time stamps
-      let timeStamps = line.match(/\[\d+:\d+\.\d+\]/g) || [];
-      let beginningTimeStamp = line.match(/^\[\d+:\d+\.\d+\]/g) || [];
-      let endingTimeStamp = line.match(/\[\d+:\d+\.\d+\]$/g) || [];
+      let timeStamps = line.match(/\[(\d+:)?\d+:\d+\.\d+\]/g) || [];
+      let beginningTimeStamp = line.match(/^\[(\d+:)?\d+:\d+\.\d+\]/g) || [];
+      let endingTimeStamp = line.match(/\[(\d+:)?\d+:\d+\.\d+\]$/g) || [];
 
       // If this line has any timestamps, previous lines without ending
       // time stamps could use its first time stamp as ending time stamp
@@ -175,7 +175,7 @@ export default class RabbitLyrics {
       }
 
       // Remove parsed time stamps and append to element
-      line = line.replace(/\[\d+:\d+\.\d+\]/g, "");
+      line = line.replace(/\[(\d+:)?\d+:\d+\.\d+\]/g, "");
 
       // Use Non-Break Space for empty lines. Otherwise, the line hight of
       // will be 0
