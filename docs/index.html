@@ -5,100 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rabbit Lyrics</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      background: #dce6da;
-    }
-
-    audio {
-      display: block;
-      width: 100%;
-      margin: 20px 0;
-    }
-
-    aside {
-      flex: 0 0 300px;
-      padding: 10px 20px;
-      background: #000000;
-      color: #ffffff;
-      line-height: 2em;
-    }
-
-    aside ol {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-    }
-
-    aside a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    main {
-      flex: 1 1 600px;
-      max-width: 800px;
-      padding: 0 20px;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: underline solid #41bdff;
-    }
-
-    .page-title {
-      text-align: center;
-    }
-
-    .grid {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: stretch;
-      margin: -10px;
-    }
-
-    .grid .rabbit-lyrics{
-      flex: 1 1 auto;
-      min-width: 280px;
-      margin: 10px;
-    }
-
-    code {
-      background: #ffffff;
-      border-radius: 0.2em;
-      padding: 0 .3em;
-    }
-
-    .rabbit-lyrics {
-      background: #ffffff;
-      border-radius: 0.2em;
-      padding: 1em;
-    }
-
-    @media screen and (max-width: 768px) {
-      body {
-        display: block;
-        font-size: 12px;
-      }
-
-      h1 {
-        font-size: 40px;
-        font-weight: 300;
-      }
-
-      aside ol {
-        position: relative;
-      }
-    }
-  </style>
-  <script src="dist/rabbit-lyrics.umd.production.min.js" type="text/javascript"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+  <link href="index.css" rel="stylesheet">
+  <link href="prism.css" rel="stylesheet">
+  <script src="index.js" defer></script>
+  <script src="prism.js" defer></script>
 </head>
 
 <body>
@@ -146,16 +56,16 @@
   You can install through NPM:
 </p>
 
-<pre><code class="bash">npm install rabbit-lyrics --save</code></pre>
+<pre><code class="language-bash">npm install rabbit-lyrics --save</code></pre>
 
 <p>
   Import it into your project using Webpack (require css-loader and style-loader):
 </p>
 
-<pre><code class="js">import RabbitLyrics from 'rabbit-lyrics'</code></pre>
+<pre><code class="language-js">import RabbitLyrics from 'rabbit-lyrics'</code></pre>
 
 <p>Or link CDN version in HTML:</p>
-<pre><code class="html">&lt;script src="https://unpkg.com/rabbit-lyrics" type="text/javascript"&gt;&lt;/script&gt;</code></pre>
+<pre><code class="language-html">&lt;script src="https://unpkg.com/rabbit-lyrics" type="text/javascript"&gt;&lt;/script&gt;</code></pre>
 
 <h2 id="initialize"><a href="#initialize">🚀 Initialize</a></h2>
 
@@ -173,7 +83,7 @@
   element before lyrics container.
 </p>
 
-<pre><code class="html">&lt;audio id="audio-1" controls&gt;
+<pre><code class="language-html">&lt;audio id="audio-1" controls&gt;
     &lt;source src="audio-1.ogg" type="audio/ogg"&gt;
     &lt;source src="audio-1.mp3" type="audio/mpeg"&gt;
 &lt;/audio&gt;
@@ -196,7 +106,7 @@
   search first audio or video element before lyrics container.
 </p>
 
-<pre><code class="html">&lt;audio id="audio-1" controls&gt;
+<pre><code class="language-html">&lt;audio id="audio-1" controls&gt;
     &lt;source src="audio-1.ogg" type="audio/ogg"&gt;
     &lt;source src="audio-1.mp3" type="audio/mpeg"&gt;
 &lt;/audio&gt;
@@ -207,7 +117,7 @@
 ...
 &lt;/div&gt;</code></pre>
 
-<pre><code class="js">new RabbitLyrics({
+<pre><code class="language-js">new RabbitLyrics({
     element: document.findElementById('lyrics-1'),
     mediaElement: document.findElementById('audio-1')
 })</code></pre>
@@ -314,7 +224,7 @@
   [03:27.19]
 </div>
 
-<pre><code class="html">&lt;audio id="audio-1" controls&gt;
+<pre><code class="language-html">&lt;audio id="audio-1" controls&gt;
   &lt;source src="..." type="audio/ogg"&gt;
   &lt;source src="..." type="audio/mpeg"&gt;
 &lt;/audio&gt;
@@ -356,7 +266,7 @@
   <source src="https://guoyunhe.me/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.mp3" type="audio/mpeg">
 </audio>
 
-<div class="rabbit-lyrics" data-media="#audio-2" data-height="500" data-alignment="center">
+<div class="rabbit-lyrics" data-media="#audio-2" data-alignment="center">
 [00:00.00] 谁のことを考えてるの?
            da re no ko to wo ka n ga e te ru no?
            究竟在想谁的事情呢？
@@ -582,12 +492,12 @@
 [03:27.19]
 </div>
 
-<pre><code class="html">&lt;audio id="audio-2" controls&gt;
+<pre><code class="language-html">&lt;audio id="audio-2" controls&gt;
     &lt;source src="..." type="audio/ogg"&gt;
     &lt;source src="..." type="audio/mpeg"&gt;
 &lt;/audio&gt;
 
-&lt;div class="rabbit-lyrics" data-media="#audio-2" data-height="500" data-alignment="center"&gt;
+&lt;div class="rabbit-lyrics" data-media="#audio-2" data-alignment="center"&gt;
 [00:00.00] 谁のことを考えてるの?
            da re no ko to wo ka n ga e te ru no?
            究竟在想谁的事情呢？
@@ -629,7 +539,7 @@
   <source src="https://guoyunhe.me/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.mp3" type="audio/mpeg">
 </audio>
 <div class="grid">
-<div class="rabbit-lyrics" data-media="#audio-3" data-height="500" data-alignment="center">
+<div class="rabbit-lyrics" data-media="#audio-3" data-alignment="center">
 [00:00.00] 谁のことを考えてるの?
 [00:03.10] ハートのスペース争夺戦
 [00:05.76] 戦況的に　一進一退で
@@ -691,7 +601,7 @@
 [03:27.19]
 </div>
 
-<div class="rabbit-lyrics" data-media="#audio-3" data-height="500" data-alignment="center">
+<div class="rabbit-lyrics" data-media="#audio-3" data-alignment="center">
 [00:00.00] 究竟在想谁的事情呢？
 [00:03.10] 心的位置争夺战
 [00:05.76] 就戰況而言　一進一退
@@ -754,12 +664,12 @@
 </div>
 </div>
 
-<pre><code class="html">&lt;audio id="audio-3" controls&gt;
+<pre><code class="language-html">&lt;audio id="audio-3" controls&gt;
     &lt;source src="..." type="audio/ogg"&gt;
     &lt;source src="..." type="audio/mpeg"&gt;
 &lt;/audio&gt;
 
-&lt;div class="rabbit-lyrics" data-media="#audio-3" data-height="500" data-alignment="center"&gt;
+&lt;div class="rabbit-lyrics" data-media="#audio-3" data-alignment="center"&gt;
 [00:00.00] 谁のことを考えてるの?
 [00:03.10] ハートのスペース争夺戦
 [00:05.76] 戦況的に　一進一退で
@@ -769,7 +679,7 @@
 ...
 &lt;/div&gt;
 
-&lt;div class="rabbit-lyrics" data-media="#audio-3" data-height="500" data-alignment="center"&gt;
+&lt;div class="rabbit-lyrics" data-media="#audio-3" data-alignment="center"&gt;
 [00:00.00] 究竟在想谁的事情呢？
 [00:03.10] 心的位置争夺战
 [00:05.76] 就戰況而言　一進一退

@@ -1,0 +1,2 @@
+import 'prismjs';
+import '../src';
