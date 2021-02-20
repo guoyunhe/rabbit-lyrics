@@ -2,11 +2,21 @@
   "name": "rabbit-lyrics",
   "version": "1.3.0",
   "description": "JavaScript audio and timed lyrics synchronizer",
-  "main": "dist/rabbit-lyrics.js",
-  "module": "src/index.js",
+  "main": "dist/rabbit-lyrics.umd.production.min.js",
+  "module": "dist/rabbit-lyrics.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsdx watch --format esm,umd",
+    "build": "tsdx build --format esm,umd",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build --format esm,umd",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
   },
   "repository": {
     "type": "git",
@@ -23,10 +33,36 @@
     "url": "https://github.com/guoyunhe/rabbit-lyrics/issues"
   },
   "homepage": "https://github.com/guoyunhe/rabbit-lyrics#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "size-limit": [
+    {
+      "path": "dist/rabbit-lyrics.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/rabbit-lyrics.esm.js",
+      "limit": "10 KB"
+    }
+  ],
   "devDependencies": {
-    "css-loader": "^2.1.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3"
+    "@size-limit/preset-small-lib": "^4.9.2",
+    "autoprefixer": "^10.2.4",
+    "cssnano": "^4.1.10",
+    "husky": "^5.0.9",
+    "rollup-plugin-postcss": "^4.0.0",
+    "size-limit": "^4.9.2",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.1.0",
+    "typescript": "^3.9.9"
   }
 }

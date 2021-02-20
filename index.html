@@ -55,6 +55,19 @@
       text-align: center;
     }
 
+    .grid {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: stretch;
+      margin: -10px;
+    }
+
+    .grid .rabbit-lyrics{
+      flex: 1 1 auto;
+      min-width: 280px;
+      margin: 10px;
+    }
+
     code {
       background: #ffffff;
       border-radius: 0.2em;
@@ -83,7 +96,7 @@
       }
     }
   </style>
-  <script src="dist/rabbit-lyrics.js" type="text/javascript"></script>
+  <script src="dist/rabbit-lyrics.umd.production.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
@@ -425,6 +438,7 @@
 [01:01.53] 引くに引けない　それぞれの事情
            hi ku ni hi ke na i so re zo re no ji jyo u
            進退兩難的　許多事情
+
 [01:06.26] ほかに何も考えらんない（真っ直ぐで）
            ho ka ni na ni mo ka n ga e ra n na i (ma ssu gu gu de)
            其他什麼的就不用多考慮了（勇往直前地）
@@ -614,7 +628,7 @@
   <source src="https://guoyunhe.me/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.ogg" type="audio/ogg">
   <source src="https://guoyunhe.me/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.mp3" type="audio/mpeg">
 </audio>
-
+<div class="grid">
 <div class="rabbit-lyrics" data-media="#audio-3" data-height="500" data-alignment="center">
 [00:00.00] 谁のことを考えてるの?
 [00:03.10] ハートのスペース争夺戦
@@ -677,8 +691,6 @@
 [03:27.19]
 </div>
 
-<br>
-
 <div class="rabbit-lyrics" data-media="#audio-3" data-height="500" data-alignment="center">
 [00:00.00] 究竟在想谁的事情呢？
 [00:03.10] 心的位置争夺战
@@ -739,6 +751,7 @@
 [03:17.42] 其實呀　現在只佔據少數幾％位置
 [03:22.48] 在他的心中根本沒有棲身之所
 [03:27.19]
+</div>
 </div>
 
 <pre><code class="html">&lt;audio id="audio-3" controls&gt;

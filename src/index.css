@@ -5,6 +5,7 @@
   height: 16.5em;
   overflow-x: hidden;
   overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 .rabbit-lyrics__line {
