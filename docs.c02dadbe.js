@@ -18,4 +18,4 @@ var e=arguments[3],t="undefined"!=typeof window?window:"undefined"!=typeof Worke
 },{"./findMediaElement":"c7W8","./RabbitLyrics":"qkbK","./index.css":"BSYk"}],"Focm":[function(require,module,exports) {
 "use strict";require("prismjs"),require("../src");
 },{"prismjs":"hKAx","../src":"fUdq"}]},{},["Focm"], null)
-//# sourceMappingURL=rabbit-lyrics/docs.c02dadbe.js.map
+//# sourceMappingURL=docs.c02dadbe.js.map
