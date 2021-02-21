@@ -13,7 +13,7 @@
     "start": "tsdx watch --format esm,umd",
     "build": "tsdx build --format esm,umd",
     "docs:start": "parcel docs/index.html",
-    "docs:build": "parcel build docs/index.html -d docs-dist --public-url ./",
+    "docs:build": "parcel build docs/index.html -d docs-dist --public-url ./ --no-minify",
     "docs:deploy": "npm run docs:build && gh-pages -d docs-dist",
     "test": "tsdx test",
     "lint": "tsdx lint",
