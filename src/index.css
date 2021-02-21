@@ -2,18 +2,27 @@
 
 .rabbit-lyrics {
   position: relative; /* Must be relative, otherwise cannot calculate offset */
+  padding: 1em 0;
   height: 16.5em;
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
 }
 
 .rabbit-lyrics__line {
+  line-height: 1.5em;
   min-height: 1.5em;
+  padding: 0 1em;
 }
 
-.rabbit-lyrics__line--active {
-  color: #41bdff;
+.rabbit-lyrics:not(.rabbit-lyrics--mini) .rabbit-lyrics__line--active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.rabbit-lyrics__inline--active {
+  color: #04a8a8;
 }
 
 /* Mini view mode */

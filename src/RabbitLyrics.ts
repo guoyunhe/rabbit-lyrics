@@ -160,6 +160,13 @@ export default class RabbitLyrics implements RabbitLyricsOptions {
           changed = true;
           line.element.classList.add('rabbit-lyrics__line--active');
         }
+        line.content.forEach((inline) => {
+          if (time > inline.startsAt) {
+            inline.element.classList.add('rabbit-lyrics__inline--active');
+          } else {
+            inline.element.classList.remove('rabbit-lyrics__inline--active');
+          }
+        });
         return true;
       } else {
         // If line should be inactive
@@ -167,6 +174,9 @@ export default class RabbitLyrics implements RabbitLyricsOptions {
           // If it hasn't been deactivated
           changed = true;
           line.element.classList.remove('rabbit-lyrics__line--active');
+          line.content.forEach((inline) => {
+            inline.element.classList.remove('rabbit-lyrics__inline--active');
+          });
         }
         return false;
       }
