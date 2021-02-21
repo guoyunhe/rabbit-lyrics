@@ -1,2 +1,2 @@
 .rabbit-lyrics{position:relative;padding:1em 0;height:16.5em;overflow-x:hidden;overflow-y:auto;scroll-behavior:smooth;background-color:#fff;border:1px solid #ddd}.rabbit-lyrics__line{line-height:1.5em;min-height:1.5em;padding:0 1em}.rabbit-lyrics:not(.rabbit-lyrics--mini) .rabbit-lyrics__line--active{background-color:rgba(0,0,0,.1)}.rabbit-lyrics__inline--active{color:#04a8a8}.rabbit-lyrics--mini{height:1.5em;overflow-y:hidden}.rabbit-lyrics--mini .rabbit-lyrics__line{display:none}.rabbit-lyrics--mini .rabbit-lyrics__line--active{display:inline-block}.rabbit-lyrics--full{height:auto;overflow-y:initial}
-/*# sourceMappingURL=/docs.c193c9b6.css.map */
+/*# sourceMappingURL=rabbit-lyrics/docs.c193c9b6.css.map */
