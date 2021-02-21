@@ -86,6 +86,9 @@ export default class RabbitLyrics implements RabbitLyricsOptions {
     this.lyricsLines = parseLyrics(this.lyrics).map((line) => {
       const lineElement = document.createElement('div');
       lineElement.className = 'rabbit-lyrics__line';
+      lineElement.addEventListener('click', () => {
+        this.mediaElement.currentTime = line.startsAt;
+      });
       const lineContent = line.content.map((inline) => {
         const inlineElement = document.createElement('span');
         inlineElement.className = 'rabbit-lyrics__inline';
@@ -153,7 +156,7 @@ export default class RabbitLyrics implements RabbitLyricsOptions {
     let time = this.mediaElement.currentTime;
     let changed = false; // If here are active lines changed
     const activeLines = this.lyricsLines.filter((line) => {
-      if (time >= line.startsAt && time <= line.endsAt) {
+      if (time >= line.startsAt && time < line.endsAt) {
         // If line should be active
         if (!line.element.classList.contains('rabbit-lyrics__line--active')) {
           // If it hasn't been activated
@@ -161,7 +164,7 @@ export default class RabbitLyrics implements RabbitLyricsOptions {
           line.element.classList.add('rabbit-lyrics__line--active');
         }
         line.content.forEach((inline) => {
-          if (time > inline.startsAt) {
+          if (time >= inline.startsAt) {
             inline.element.classList.add('rabbit-lyrics__inline--active');
           } else {
             inline.element.classList.remove('rabbit-lyrics__inline--active');
