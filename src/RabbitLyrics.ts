@@ -75,6 +75,12 @@ export default class RabbitLyrics implements RabbitLyricsOptions {
     this.mediaElement.addEventListener('ended', this.handleStatusChange);
   }
 
+  /** Change lyrics content and re-render views */
+  public setLyrics(lyrics: string): void {
+    this.lyrics = lyrics;
+    this.render();
+  }
+
   private render(): void {
     // Add class names
     this.lyricsElement.classList.add('rabbit-lyrics');

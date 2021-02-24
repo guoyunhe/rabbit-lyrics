@@ -7,10 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.0] - 2021-02-25
+
 ### Added
 
 - ESM module
 - Karaoke feature
+- `setLyrics()` function to change lyrics dynamically
 
 ### Changed
 
@@ -20,7 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - **BREAKING CHANGE**: height option. You can set height through CSS.
 
-## [1.3.0]
+## [1.3.0] - 2019-08-19
 
 ### Changed
 
@@ -30,26 +33,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Support hour timestamp [#12](https://github.com/guoyunhe/rabbit-lyrics/issues/12)
 
-## [1.2.0]
+## [1.2.0] - 2019-06-06
 
 ### Added
 
 - Support multiple lyrics [#10](https://github.com/guoyunhe/rabbit-lyrics/issues/10)
 
-## [1.1.2]
+## [1.1.2] - 2019-05-08
 
 ### Fixed
 
 - Webpack library export issues [#9](https://github.com/guoyunhe/rabbit-lyrics/issues/9)
 
-## [1.1.1] 2019-02-28
+## [1.1.1] - 2019-02-28
 
 ### Fixed
 
 - Cannot specify media element [#6](https://github.com/guoyunhe/rabbit-lyrics/issues/6)
 - `data-audio` should be changed to `data-media` in documentation
 
-## [1.1.0] 2018-10-25
+## [1.1.0] - 2018-10-25
 
 ### Added
 
@@ -109,7 +112,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Lyrics synchronizer
 - Three sizes: tiny, medium, full.
 
-[unreleased]: https://github.com/guoyunhe/rabbit-lyrics/compare/v1.3.0...HEAD
+[unreleased]: https://github.com/guoyunhe/rabbit-lyrics/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/guoyunhe/rabbit-lyrics/compare/v1.3.0...v2.0.0
 [1.3.0]: https://github.com/guoyunhe/rabbit-lyrics/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/guoyunhe/rabbit-lyrics/compare/v1.1.2...v1.2.0
 [1.1.2]: https://github.com/guoyunhe/rabbit-lyrics/compare/v1.1.1...v1.1.2

@@ -1,6 +1,6 @@
 {
   "name": "rabbit-lyrics",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "JavaScript audio and timed lyrics synchronizer",
   "main": "dist/rabbit-lyrics.umd.production.min.js",
   "module": "dist/rabbit-lyrics.esm.js",
@@ -35,7 +35,7 @@
   "bugs": {
     "url": "https://github.com/guoyunhe/rabbit-lyrics/issues"
   },
-  "homepage": "https://github.com/guoyunhe/rabbit-lyrics#readme",
+  "homepage": "https://guoyunhe.github.io/rabbit-lyrics/",
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"

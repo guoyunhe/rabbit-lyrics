@@ -12,7 +12,7 @@ import findMediaElement from './findMediaElement';
 import RabbitLyrics from './RabbitLyrics';
 import './index.css';
 
-export { RabbitLyrics };
+export { RabbitLyrics as default };
 
 // Support HTML initialization
 document.addEventListener(

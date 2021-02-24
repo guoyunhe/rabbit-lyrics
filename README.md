@@ -1,4 +1,4 @@
-# Rabbit Lyrics
+# 🐇 Rabbit Lyrics 🐇
 
 **Rabbit Lyrics** is an audio and timed lyrics synchronizer for web. No jQuery
 required. No any dependencies.
