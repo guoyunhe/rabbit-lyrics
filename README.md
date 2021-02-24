@@ -6,8 +6,8 @@ required. No any dependencies.
 Yes, here are already many similar things but Rabbit Lyrics has something special:
 
 1. Highlight multiple lines at the same time. Useful when adding translations.
-2. Do not depend on jQuery or any other libraries.
-3. Predefined themes for different web design.
+2. Karaoke mode.
+3. Do not depend on jQuery or any other libraries.
 
 [Document and examples](https://guoyunhe.github.io/rabbit-lyrics/)
 
@@ -15,6 +15,6 @@ Yes, here are already many similar things but Rabbit Lyrics has something specia
 
 [Join the Telegram group](https://t.me/rabbit_lyrics)
 
-Copyright 2015-2019 Guo Yunhe
+Copyright 2015-2021 Guo Yunhe
 
 Released under GNU Affero General Public License version 3 or later
