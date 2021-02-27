@@ -1,36 +1,29 @@
 import RabbitLyrics from '../src';
-import { chinese, combined, japanese } from './lyrics';
+import * as lyricsTexts from './lyrics';
 
 // Header Lyrics
 
+const alignmentSelect = document.getElementById('alignment-select');
+const languageSelect = document.getElementById('language-select');
+const viewModeSelect = document.getElementById('viewmode-select');
+
 const lyrics = new RabbitLyrics(
   document.getElementById('header-lyrics'),
-  document.getElementById('header-audio')
+  document.getElementById('header-audio'),
+  {
+    lyrics: lyricsTexts[languageSelect.value],
+    alignment: alignmentSelect.value,
+  }
 );
 
-document
-  .getElementById('chinese-input')
-  .addEventListener('change', function (e) {
-    if (e.target.checked) {
-      lyrics.setLyrics(chinese);
-    }
-  });
+languageSelect.addEventListener('change', function (e) {
+  lyrics.setLyrics(lyricsTexts[e.target.value]);
+});
 
-document
-  .getElementById('japanese-input')
-  .addEventListener('change', function (e) {
-    if (e.target.checked) {
-      lyrics.setLyrics(japanese);
-    }
-  });
+alignmentSelect.addEventListener('change', function (e) {
+  lyrics.setAlignment(e.target.value);
+});
 
-document
-  .getElementById('combined-input')
-  .addEventListener('change', function (e) {
-    if (e.target.checked) {
-      lyrics.setLyrics(combined);
-    }
-  });
-
-document.getElementById('japanese-input').checked = true;
-lyrics.setLyrics(japanese);
+viewModeSelect.addEventListener('change', function (e) {
+  lyrics.setViewMode(e.target.value);
+});
