@@ -59,6 +59,12 @@ a {
   margin: 10px;
 }
 
+pre[class*='language-'] {
+  max-height: 300px;
+  overflow: auto;
+  margin: 1.5em 0 !important;
+}
+
 code {
   background: #ffffff;
   border-radius: 0.2em;
