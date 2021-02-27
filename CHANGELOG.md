@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- `setAlignment()` function
+- `setViewMode()` function
+
 ### Fixed
 
 - Highlight current lyrics line immediately after re-rendering or clicking

@@ -81,6 +81,28 @@ export default class RabbitLyrics implements RabbitLyricsOptions {
     this.render();
   }
 
+  /** Change alignment */
+  public setAlignment(alignment: RabbitLyricsAlignment) {
+    this.alignment = alignment;
+    this.lyricsElement.classList.remove(
+      'rabbit-lyrics--center',
+      'rabbit-lyrics--left',
+      'rabbit-lyrics--right'
+    );
+    this.lyricsElement.classList.add('rabbit-lyrics--' + this.alignment);
+  }
+
+  /** Change alignment */
+  public setViewMode(viewMode: RabbitLyricsViewMode) {
+    this.viewMode = viewMode;
+    this.lyricsElement.classList.remove(
+      'rabbit-lyrics--clip',
+      'rabbit-lyrics--full',
+      'rabbit-lyrics--mini'
+    );
+    this.lyricsElement.classList.add('rabbit-lyrics--' + this.viewMode);
+  }
+
   private render(): void {
     // Add class names
     this.lyricsElement.classList.add('rabbit-lyrics');
