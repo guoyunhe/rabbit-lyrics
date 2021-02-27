@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- Highlight current lyrics line immediately after re-rendering or clicking
+
 ## [2.0.0] - 2021-02-25
 
 ### Added

@@ -94,6 +94,7 @@ export default class RabbitLyrics implements RabbitLyricsOptions {
       lineElement.className = 'rabbit-lyrics__line';
       lineElement.addEventListener('click', () => {
         this.mediaElement.currentTime = line.startsAt;
+        this.synchronize();
       });
       const lineContent = line.content.map((inline) => {
         const inlineElement = document.createElement('span');
@@ -105,6 +106,7 @@ export default class RabbitLyrics implements RabbitLyricsOptions {
       this.lyricsElement.append(lineElement);
       return { ...line, content: lineContent, element: lineElement };
     });
+    this.synchronize();
   }
 
   private getOptionsFromAttributes(): Partial<RabbitLyricsOptions> {
