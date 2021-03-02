@@ -20,7 +20,7 @@ export default function findMediaElement(
       return previousElement as HTMLMediaElement;
     } else {
       const mediaChildren = previousElement.querySelectorAll('audio, video');
-      if (mediaChildren) {
+      if (mediaChildren.length > 0) {
         return mediaChildren.item(mediaChildren.length - 1) as HTMLMediaElement;
       }
     }

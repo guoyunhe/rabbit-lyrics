@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- `findMediaElement` children checking
+
 ## [2.1.0] - 2021-02-27
 
 ### Added

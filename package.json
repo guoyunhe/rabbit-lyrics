@@ -19,7 +19,8 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build --format esm,umd",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
