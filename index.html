@@ -7,7 +7,7 @@
     <link rel="icon" href="logo.a2fff80c.png">
     <link href="docs.e82f05a7.css" rel="stylesheet">
     <link href="prism.6735031c.css" rel="stylesheet">
-    <script src="docs.027ac9cd.js" defer=""></script>
+    <script src="docs.9dfcfd65.js" defer=""></script>
     <script src="prism.3244bf07.js" defer=""></script>
   <link rel="stylesheet" href="docs.48758177.css"></head>
 
@@ -32,17 +32,17 @@
       </audio>
       <form>
         <label>
-          Language
-          <select id="language-select" name="language">
+          Lyrics
+          <select id="lyrics-select">
             <option value="japanese" selected="">Japanese</option>
             <option value="chinese">Chinese</option>
-            <option value="romaji">Romaji</option>
+            <option value="romaji">Romaji (Karaoke)</option>
             <option value="combined">Combined</option>
           </select>
         </label>
         <label>
           Alignment
-          <select id="alignment-select" name="language">
+          <select id="alignment-select">
             <option value="center" selected="">Center</option>
             <option value="left">Left</option>
             <option value="right">Right</option>
@@ -50,7 +50,7 @@
         </label>
         <label>
           View Mode
-          <select id="viewmode-select" name="language">
+          <select id="viewmode-select">
             <option value="clip" selected="">Clip</option>
             <option value="full">Full</option>
             <option value="mini">Mini</option>
@@ -241,7 +241,7 @@
           <source src="https://guoyunhe.me/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.mp3" type="audio/mpeg">
         </audio>
 
-        <div class="rabbit-lyrics" data-media="#audio-karaoke">{{karaoke}}</div>
+        <div class="rabbit-lyrics" data-media="#audio-karaoke">{{romaji}}</div>
       </div>
 
       <h3 id="example-multiple-lyrics">
@@ -254,18 +254,13 @@
       </p>
 
       <div class="example">
-        <audio id="audio-3" controls="">
+        <audio controls="">
           <source src="https://guoyunhe.me/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.ogg" type="audio/ogg">
           <source src="https://guoyunhe.me/wp-content/uploads/2015/03/hao-gan-win-win-wu-tiao-jian.mp3" type="audio/mpeg">
         </audio>
         <div class="grid">
-          <div class="rabbit-lyrics" data-media="#audio-3" data-alignment="center">
-            {{japanese}}
-          </div>
-
-          <div class="rabbit-lyrics" data-media="#audio-3" data-alignment="center">
-            {{chinese}}
-          </div>
+          <div class="rabbit-lyrics">{{japanese}}</div>
+          <div id="yooo" class="rabbit-lyrics">{{chinese}}</div>
         </div>
       </div>
 
