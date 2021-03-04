@@ -4,19 +4,19 @@ import * as lyricsTexts from './lyrics';
 // Header Lyrics
 
 const alignmentSelect = document.getElementById('alignment-select');
-const languageSelect = document.getElementById('language-select');
+const lyricsSelect = document.getElementById('lyrics-select');
 const viewModeSelect = document.getElementById('viewmode-select');
 
 const lyrics = new RabbitLyrics(
   document.getElementById('header-lyrics'),
   document.getElementById('header-audio'),
   {
-    lyrics: lyricsTexts[languageSelect.value],
+    lyrics: lyricsTexts[lyricsSelect.value],
     alignment: alignmentSelect.value,
   }
 );
 
-languageSelect.addEventListener('change', function (e) {
+lyricsSelect.addEventListener('change', function (e) {
   lyrics.setLyrics(lyricsTexts[e.target.value]);
 });
 

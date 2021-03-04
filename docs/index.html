@@ -38,17 +38,17 @@
       </audio>
       <form>
         <label>
-          Language
-          <select id="language-select" name="language">
+          Lyrics
+          <select id="lyrics-select">
             <option value="japanese" selected>Japanese</option>
             <option value="chinese">Chinese</option>
-            <option value="romaji">Romaji</option>
+            <option value="romaji">Romaji (Karaoke)</option>
             <option value="combined">Combined</option>
           </select>
         </label>
         <label>
           Alignment
-          <select id="alignment-select" name="language">
+          <select id="alignment-select">
             <option value="center" selected>Center</option>
             <option value="left">Left</option>
             <option value="right">Right</option>
@@ -56,7 +56,7 @@
         </label>
         <label>
           View Mode
-          <select id="viewmode-select" name="language">
+          <select id="viewmode-select">
             <option value="clip" selected>Clip</option>
             <option value="full">Full</option>
             <option value="mini">Mini</option>
@@ -271,7 +271,7 @@
           />
         </audio>
 
-        <div class="rabbit-lyrics" data-media="#audio-karaoke">{{karaoke}}</div>
+        <div class="rabbit-lyrics" data-media="#audio-karaoke">{{romaji}}</div>
       </div>
 
       <h3 id="example-multiple-lyrics">

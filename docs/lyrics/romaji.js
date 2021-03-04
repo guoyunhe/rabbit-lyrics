@@ -1,7 +1,7 @@
 export default `
-[00:00.00] da re no ko to wo ka n ga e te ru no?
-[00:03.10] haato no supeesu so u da tsu se n
-[00:05.76] ze n ryo u te ki ni i sshi n i tta i de
+[00:00.50] da [00:00.70]re [00:00.90]no [00:01.20]ko [00:01.35]to [00:01.50]wo [00:01.80]ka [00:01.90]n [00:02.15]ga [00:02.30]e [00:02.50]te [00:02.65]ru [00:02.80]no?
+[00:03.10] haato [00:03.70]no [00:03.80]supeesu [00:04.60]so [00:04.80]u [00:05.00]da [00:05.20]tsu [00:05.50]se [00:05.60]n
+[00:05.76] ze [00:06.20]n [00:06.45]ryo [00:06.65]u [00:06.90]te [00:07.20]ki [00:07.40]ni [00:08.20]i [00:08.40]sshi [00:08.80]n [00:09.20]i [00:09.40]tta [00:09.60]i [00:09.80]de
 [00:10.56] yu u da n na ra na i na
 [00:11.70] a no ne i ma no to ko ho n no ka zu percent shi ka
 [00:16.73] aitsu no ko ko ro ni i ba sho ga na i n da

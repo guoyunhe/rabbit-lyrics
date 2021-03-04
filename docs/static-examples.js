@@ -1,4 +1,4 @@
-import { chinese, combined, japanese, karaoke, romaji } from './lyrics';
+import { chinese, combined, japanese, romaji } from './lyrics';
 
 const examples = document.getElementsByClassName('example');
 
@@ -7,7 +7,6 @@ for (const example of examples) {
     .replace('{{japanese}}', japanese)
     .replace('{{chinese}}', chinese)
     .replace('{{combined}}', combined)
-    .replace('{{karaoke}}', karaoke)
     .replace('{{romaji}}', romaji);
   const pre = document.createElement('pre');
   const code = document.createElement('code');
